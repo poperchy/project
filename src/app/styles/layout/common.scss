@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "tahoma", sans-serif;
+  color: #454545;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  background: #ffffff;
+  border-radius: 2px;
+  padding: 16px 40px;
+  cursor: pointer;
+
+}
+
+.container {
+  position: relative;
+  max-width: $container;
+  margin: 0 auto;
+  padding: 0 20px;
+
+
+  @include tablet {
+    padding: 0 30px;
+  }
+
+  @include mobile {
+    padding: 0 20px;
+  }
+}
