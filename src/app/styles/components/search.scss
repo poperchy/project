@@ -1,0 +1,59 @@
+
+.input-group.search-group {
+  height: 50px;
+  min-width: 50px;
+  position: relative;
+}
+
+
+.input-group .form-control:focus {
+  padding-left: 50px;
+  width: 380px;
+  border: 1px solid #C4C9CF;
+  color: #000;
+  border-radius: 5px;
+  cursor: auto;
+  background-color: #fff;
+  transition:width 0.2s;
+}
+
+.input-group .form-control::-moz-placeholder {
+  color: transparent;
+}
+
+.input-group .form-control::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.input-group .form-control:focus::-moz-placeholder {
+  color: #ddd;
+}
+.input-group .form-control:focus::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+.input-group .form-control:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-color: #e6e6e6;
+}
+
+.form-control.search-control {
+  background:#FFFFFF url(../images/search.svg) no-repeat left 11px center / 25px;
+  box-shadow: 0px 2px 7px rgba(64, 93, 114, 0.4);
+  border-radius: 50%;
+  border: none;
+  color: transparent;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  outline: 0 none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  transition:  0.1s;
+}

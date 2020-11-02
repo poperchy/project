@@ -1,8 +1,13 @@
 @font-face {
-  font-family: "openSans";
-  src: url("../fonts/OpenSans-Regular.ttf");
-  font-style: normal;
+  font-family: "NotoSansReg";
+  src: url("../fonts/NotoSans-Regular.woff2") format("woff2"); /* Modern Browsers */
   font-weight: normal;
-  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoSansBold";
+  src: url("../fonts/NotoSans-Bold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
 }
 
