@@ -1,5 +1,12 @@
 .social-links{
-
+    margin-left: 20px;
     display: flex;
-
+    gap: 10px;
+img{
+    transition: 0.2s;
+}
+    a:hover img{
+        transform: scale(0.9);
+        transition: 0.2s;
+    }
 }

@@ -1,21 +1,37 @@
 .header {
   background: #F3F4F6;
   box-shadow: 0px 2px 15px rgba(12, 32, 56, 0.4), inset 0px -10px 20px #FFFFFF;
-&__wrap{
-  display: flex;
-  height: 100px;
-  justify-content: space-between;
-}
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+
+    &-mobile {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   &__logo {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     max-width: 190px;
     width: 100%;
+
+    img {
+      width: 100%;
+    }
   }
-  &__connections{
-   display: flex;
+
+  &__connections {
+    display: flex;
     align-items: center;
   }
+
   &__basket {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,21 +39,288 @@
     width: 50px;
     height: 50px;
     background: #FFFFFF;
+    margin-left: 20px;
     box-shadow: 0px 2px 7px rgba(64, 93, 114, 0.4);
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(0.9);
+      transition: 0.2s;
+    }
+
+    &-count {
+      font-family: NotoSansReg,sans-serif;
+      position: absolute;
+      top: -7px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 18px;
+      color: #FFFFFF;
+      right: -5px;
+      width: 21px;
+      height: 21px;
+      background: linear-gradient(104.72deg, #EB1414 5.14%, #940909 76.88%);
+    }
   }
-  &__btn-wrap{
-    display: flex;
+
+  &__btn-wrap {
+    display: none;
+    @include tablet{
+      display: flex;
+      align-items: center;
+      margin-right: 70px;
+      margin-left: auto;
+    }
+    @include mobile{
+      display: flex;
+      align-items: center;
+      margin-right: 70px;
+      margin-left: auto;
+    }
   }
-  &__phones{
+
+  &__phones {
     display: flex;
     flex-direction: column;
+    padding-left: 50px;
+    margin-left: 20px;
+    background: url('../images/phone.svg') no-repeat left;
   }
 }
-.nav__menu{
-  ul{
+
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  ul:first-child {
     display: flex;
     align-items: center;
     height: 100%;
     gap: 50px;
+    margin: 0 auto;
+    @include tablet{
+      height: auto;
+    }
+    @include mobile{
+      height: auto;
+    }
+  }
+
+  li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  ul a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #123D6F;
+    transition: 0.2s;
+
+    &:hover {
+      color: #BE0E0E;
+      transition: 0.2s;
+    }
+
+    &:active {
+      color: #930909;
+      transition: 0s;
+    }
+  }
+
+
+  @include tablet{
+    position: fixed;
+    transform: translateX(105%);
+    flex-direction: column-reverse;
+    top: 103px;
+    left: 0;
+    height: 134px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(64, 93, 114, 0.35);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.2s;
+  }
+  @include mobile{
+    position: fixed;
+    transform: translateX(105%);
+    flex-direction: column-reverse;
+    top: 103px;
+    left: 0;
+    height: 264px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(64, 93, 114, 0.35);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.2s
+  }
+  &--active{
+    transform: translateX(0);
   }
 }
+.nav__list{
+  display: flex;
+  gap: 50px;
+}
+.drop {
+  padding-right: 15px;
+  transition: 0.2s;
+  background: url("../images/drop-arrow.svg") no-repeat right 53%;
+
+  &:hover {
+    &:after {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+
+    .drop__list {
+      display: flex;
+      @include tablet{
+        display: none;
+      }
+      @include mobile{
+        display: none;
+      }
+    }
+  }
+
+}
+
+.drop__list {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 103px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 10px rgba(64, 93, 114, 0.35);
+  border-radius: 5px;
+  height: 90px;
+  justify-content: space-between;
+  width: 100%;
+
+  li {
+    margin-right: 10px;
+  }
+
+  li:first-child {
+    padding-left: 125px;
+  }
+
+  li:last-child {
+    padding-right: 125px;
+    margin-right: 0;
+  }
+
+  svg {
+    margin-right: 12px;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: -3px;
+    width: 100%;
+    height: 3px;
+    background: transparent;
+  }
+}
+
+.burger__btn {
+  position: absolute;
+  right: 0;
+  top: 35%;
+  display: none;
+  background: transparent;
+  border: none;
+  height: 21px;
+  width: 28px;
+  transition: 0.2s;
+  outline: transparent;
+
+  @include tablet {
+    display: flex;
+  }
+  @include mobile {
+    display: flex;
+  }
+
+  &-lines {
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    top: 50%;
+    left: 0;
+    background: #123D6F;
+    transition: 0.2s;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 28px;
+      height: 3px;
+      background: #123D6F;
+      left: 0;
+      top: 10px;
+      transition: 0.2s;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 28px;
+      height: 3px;
+      background: #123D6F;
+      left: 0;
+      top: -10px;
+      transition: 0.2s;
+    }
+  }
+
+  &--active .burger__btn-lines {
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    top: 50%;
+    background: transparent;
+    right: 0;
+    transition: 0.2s;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 28px;
+      height: 3px;
+      background: #123D6F;
+      right: 0;
+      top: 0px;
+      transform: rotate(-45deg);
+      transition: 0.2s;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 28px;
+      height: 3px;
+      background: #123D6F;
+      right: 0;
+      top: 0px;
+      transform: rotate(45deg);
+      transition: 0.2s;
+    }
+  }
+}
+

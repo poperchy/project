@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: #123D6F;
 }
 
 ul {
@@ -60,4 +60,18 @@ button {
   @include mobile {
     padding: 0 10px;
   }
+}
+
+.show-d{
+  display: flex;
+  @include tablet{
+    display: none;
+  }
+  @include mobile{
+    display: none;
+  }
+}
+
+.hidden{
+  overflow: hidden;
 }
