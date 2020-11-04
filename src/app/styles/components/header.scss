@@ -8,6 +8,10 @@
     height: 100px;
     justify-content: space-between;
 
+    @include mobile{
+      height: 60px;
+    }
+
     &-mobile {
       display: flex;
       align-items: center;
@@ -22,12 +26,18 @@
 
     img {
       width: 100%;
+      @include mobile {
+        width: 130px;
+      }
     }
   }
 
   &__connections {
     display: flex;
     align-items: center;
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__basket {
@@ -42,6 +52,14 @@
     margin-left: 20px;
     box-shadow: 0px 2px 7px rgba(64, 93, 114, 0.4);
     transition: 0.2s;
+    @include mobile {
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      img {
+        width: 17px;
+      }
+    }
 
     &:hover {
       transform: scale(0.9);
@@ -49,7 +67,7 @@
     }
 
     &-count {
-      font-family: NotoSansReg,sans-serif;
+      font-family: NotoSansReg, sans-serif;
       position: absolute;
       top: -7px;
       font-style: normal;
@@ -63,21 +81,27 @@
       width: 21px;
       height: 21px;
       background: linear-gradient(104.72deg, #EB1414 5.14%, #940909 76.88%);
+      @include mobile {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 13px;
+      }
     }
   }
 
   &__btn-wrap {
     display: none;
-    @include tablet{
+    @include tablet {
       display: flex;
       align-items: center;
       margin-right: 70px;
       margin-left: auto;
     }
-    @include mobile{
+    @include mobile {
       display: flex;
       align-items: center;
-      margin-right: 70px;
+      margin-right: 47px;
       margin-left: auto;
     }
   }
@@ -88,6 +112,13 @@
     padding-left: 50px;
     margin-left: 20px;
     background: url('../images/phone.svg') no-repeat left;
+    @include mobile {
+      font-size: 16px;
+      font-weight: 600;
+      margin-left: 0;
+      margin-bottom: 15px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -102,11 +133,17 @@
     height: 100%;
     gap: 50px;
     margin: 0 auto;
-    @include tablet{
+    @media(min-width: 1024px) and(max-width: 1130px) {
+      gap: 17px;
+    }
+
+    @include tablet {
       height: auto;
     }
-    @include mobile{
+    @include mobile {
       height: auto;
+      flex-direction: column;
+      gap: 8px;
     }
   }
 
@@ -140,7 +177,7 @@
   }
 
 
-  @include tablet{
+  @include tablet {
     position: fixed;
     transform: translateX(105%);
     flex-direction: column-reverse;
@@ -154,11 +191,11 @@
     justify-content: space-evenly;
     transition: 0.2s;
   }
-  @include mobile{
+  @include mobile {
     position: fixed;
     transform: translateX(105%);
     flex-direction: column-reverse;
-    top: 103px;
+    top: 63px;
     left: 0;
     height: 264px;
     background: #FFFFFF;
@@ -168,18 +205,31 @@
     justify-content: space-evenly;
     transition: 0.2s
   }
-  &--active{
+
+  &--active {
     transform: translateX(0);
   }
 }
-.nav__list{
+
+.nav__list {
   display: flex;
   gap: 50px;
+
 }
+
 .drop {
   padding-right: 15px;
   transition: 0.2s;
   background: url("../images/drop-arrow.svg") no-repeat right 53%;
+
+  @include tablet {
+    padding-right: 0;
+    background: none;
+  }
+  @include mobile {
+    padding-right: 0;
+    background: none;
+  }
 
   &:hover {
     &:after {
@@ -188,10 +238,10 @@
 
     .drop__list {
       display: flex;
-      @include tablet{
+      @include tablet {
         display: none;
       }
-      @include mobile{
+      @include mobile {
         display: none;
       }
     }
@@ -211,17 +261,24 @@
   justify-content: space-between;
   width: 100%;
 
+
   li {
     margin-right: 10px;
   }
 
   li:first-child {
     padding-left: 125px;
+    @media(min-width: 1024px) and (max-width: 1110px){
+      padding-left: 50px;
+    }
   }
 
   li:last-child {
     padding-right: 125px;
     margin-right: 0;
+    @media(min-width: 1024px) and (max-width: 1110px){
+      padding-right: 50px;
+    }
   }
 
   svg {
@@ -255,6 +312,7 @@
   }
   @include mobile {
     display: flex;
+    top: 30%;
   }
 
   &-lines {
