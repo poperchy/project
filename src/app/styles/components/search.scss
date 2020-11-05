@@ -1,28 +1,36 @@
 .search__clear{
   position: relative;
-  display: flex;
+  display: none;
   height: 50px;
   align-items: center;
-  width: 10px;
+  width: 50px;
   z-index: 10;
+  margin-left: auto;
   cursor: pointer;
+  @include mobile{
+    width: 40px;
+    height: 40px;
+  }
+  &--active{
+    display: flex;
+  }
 
   &:after{
     position: absolute;
     content: '';
-    right: 0;
+    right: 50%;
     width: 14px;
     height: 2px;
-    transform: rotate(-45deg);
+    transform:translateX(50%) rotate(-45deg);
     background: #C4C9CF;
   }
   &:before{
     position: absolute;
     content: '';
-    right: 0;
+    right: 50%;
     width: 14px;
     height: 2px;
-    transform: rotate(45deg);
+    transform:translateX(50%) rotate(45deg);
     background: #C4C9CF;
   }
 }
@@ -32,23 +40,57 @@
   min-width: 50px;
   position: relative;
   @include mobile{
-    height: 30px;
-    min-width: 30px;
+    height: 40px;
+    min-width: 40px;
   }
 
 
 }
 .input-group .form-control:focus {
   padding-left: 50px;
-  width: 624px;
+  width: 42vw;
   border: 1px solid #C4C9CF;
   color: #000;
   border-radius: 5px;
   cursor: auto;
   background-color: #fff;
   transition: width 0.2s;
-}
 
+  @media(min-width: 1125px)and(max-width: 1170px){
+    width: 41vw;
+  }
+  @media(min-width: 1024px)and(max-width: 1125px){
+    width: 39vw;
+  }
+  @media(min-width: 1024px)and(max-width: 1085px){
+    width: 36vw;
+  }
+  @media(min-width: 1024px)and(max-width: 1045px){
+    width: 35vw;
+  }
+  @media(max-width: 430px){
+    width: 72.4vw;
+  }
+  @media(max-width: 400px){
+    width: 71vw;
+  }
+  @media(max-width: 385px){
+    width: 69vw;
+  }
+  @media(max-width: 360px){
+    width: 67vw;
+  }
+  @media(max-width: 330px){
+    width: 65vw;
+  }
+  @media (max-width: 320px) {
+    width: 63vw;
+  }
+  @include mobile{
+    padding-left: 30px;
+
+  }
+}
 
 
 .input-group .form-control::-moz-placeholder {
@@ -92,12 +134,20 @@
   -webkit-backface-visibility: hidden;
   transition: 0.1s;
   @include mobile{
-    width: 30px;
-    height: 30px;
-    background: #FFFFFF url(../images/search.svg) no-repeat left 8px center / 15px;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF url(../images/search.svg) no-repeat left 11px center / 19px;
   }
 
 }
+
+
+
+
+.input-group .form-control:focus .header__logo{
+  display: none;
+}
+
 
 
 
