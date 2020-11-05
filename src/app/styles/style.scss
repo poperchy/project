@@ -9,12 +9,16 @@
 
 @import "mixins/layout";
 @import "fonts/fonts";
+
 @import "libraries/normalize";
 @import "libraries/swiper-bundle";
 @import "libraries/fancybox.css";
+
 @import "components/header";
+@import "components/footer";
 @import "components/search";
 @import "components/social-links";
+
 @import "layout/common";
 @import "layout/visually-hidden";
 

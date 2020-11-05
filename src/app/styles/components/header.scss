@@ -126,6 +126,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  z-index: 10;
 
   ul:first-child {
     display: flex;
@@ -197,7 +198,7 @@
     flex-direction: column-reverse;
     top: 63px;
     left: 0;
-    height: 264px;
+    height: 330px;
     background: #FFFFFF;
     box-shadow: 0px 2px 10px rgba(64, 93, 114, 0.35);
     border-radius: 5px;
@@ -221,6 +222,15 @@
   padding-right: 15px;
   transition: 0.2s;
   background: url("../images/drop-arrow.svg") no-repeat right 53%;
+
+  &__item{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #123D6F;
+  }
 
   @include tablet {
     padding-right: 0;
@@ -260,6 +270,7 @@
   height: 90px;
   justify-content: space-between;
   width: 100%;
+  z-index: 10;
 
 
   li {
@@ -381,4 +392,3 @@
     }
   }
 }
-

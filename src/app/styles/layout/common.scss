@@ -94,3 +94,51 @@ button {
 ::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
+.ml-auto{
+  margin-left: auto;
+}
+
+.copyright-dev-cmbox {
+  padding: 8px 0;
+  background: #F3F4F6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright-dev-cmbox a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #0A3D76;
+}
+
+.copyright-dev-cmbox a:hover {
+  color: #A62E41;
+}
+
+.copyright-dev-cmbox a img {
+  max-width: 90px;
+  margin-left: 10px;
+}
+
+.hide-desktop{
+  display: none !important;
+  @include tablet{
+    display: block !important;
+  }
+  @include mobile{
+    display: block !important;
+  }
+}
