@@ -1,0 +1,122 @@
+.hero {
+  
+  //@include mobile{
+  //  height: 100vh;
+  //}
+  //
+  .mobile-bg {
+    display: none;
+    @include mobile {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  @include mobile{
+    background: url("../images/hero-slider/hero-mobile-min.jpg")no-repeat;
+    height: 280px;
+    display: flex;
+    background-size:cover;
+  }
+
+  &__slide-content {
+    position: absolute;
+    max-width: 1420px;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+
+      @include mobile {
+        position: relative;
+      }
+
+    div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      padding: 0 50px;
+
+      @media(max-width: 1470px) {
+        padding: 0 60px;
+      }
+      @include mobile {
+        padding: 0 10px;
+      }
+    }
+
+    h1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 34px;
+      line-height: 40px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      max-width: 800px;
+      margin-bottom: 15px;
+
+      @include tablet {
+        font-size: 20px;
+        line-height: 26px;
+        max-width: 450px;
+      }
+      @include mobile {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #FFFFFF;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 7px;
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include mobile {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    ul {
+      margin-bottom: 56px;
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+
+    li {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #FFFFFF;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include mobile {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
