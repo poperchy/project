@@ -225,6 +225,19 @@
   display: flex;
   gap: 50px;
 
+  .drop:nth-child(2) .drop__list{
+    left: 31%;
+    width: auto;
+    gap: 30px;
+
+    li:first-child{
+      padding-left: 35px;
+    }
+    li:last-child{
+      padding-right: 35px;
+    }
+  }
+
 }
 
 .drop {

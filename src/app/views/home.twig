@@ -1,5 +1,10 @@
 {% extends 'layout/base.twig' %}
 {% block title %}Пасена{% endblock %}
 {% block body %}
-{% include 'components/hero.twig' %}
+    {% include 'components/hero.twig' %}
+    {% include 'components/section-title.twig' with
+        {
+            title: 'Популярные товары',
+        } %}
+    {% include 'components/popular-slider.twig' %}
 {% endblock %}
