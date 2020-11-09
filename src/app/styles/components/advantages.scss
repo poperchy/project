@@ -1,0 +1,124 @@
+.advantages {
+
+  background: #F3F4F6;
+
+&__wrap-desc{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: fit-content;
+
+  h3{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #123D6F;
+  }
+  p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #123D6F;
+    opacity: 0.85;
+  }
+}
+  &__wrap-content{
+    display: flex;
+    align-items: center;
+  }
+  button{
+    background: transparent;
+    border: none;
+    outline: transparent;
+  }
+  &__wrap {
+    display: flex;
+  }
+
+  &__tabs-img, &__boxes {
+    width: 50%;
+  }
+  &__tabs-img{
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+}
+
+.title-box-active p {
+  min-height: 50px;
+  height: 100%;
+  transition: 0.2s;
+}
+
+.advantages__desc {
+  height: 0;
+  overflow: hidden;
+}
+
+
+
+
+.btn-img{
+  position: relative;
+  width: 77px;
+  transition: 0.2s;
+
+  img:nth-child(2){
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.title-box .active{
+  img:nth-child(1){
+    visibility: hidden;
+    transition: 0.05s;
+  }
+  img:nth-child(2){
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: 0.2s;
+  }
+  .btn-img{
+    background: #F3F4F6;
+    box-shadow: 2px -2px 10px #FFFFFF, -1px 1px 2px #DDE4EE, -1px 1px 15px #DDE4EE, inset 2px -2px 8px #FFFFFF, inset 2px -2px 8px #FFFFFF, inset -1px 2px 2px rgba(134, 163, 197, 0.85), inset -2px 4px 10px rgba(134, 163, 197, 0.95);
+    border-radius: 50%;
+    transition: 0.2s;
+    width: 141px;
+    height: 116px;
+  }
+  .advantages__wrap-content{
+    margin-left: -22px;
+  }
+}
+.tabcontent {
+  display: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

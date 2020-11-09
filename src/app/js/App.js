@@ -43,30 +43,6 @@ window.onload = function () {
         });
     });
 
-
-// const formControl = document.querySelector('.form-control');
-// const headerLogo = document.querySelector('.header__logo');
-//  if(formControl.focus){
-//      headerLogo.style.display='none';
-// }
-
-    // for (let i = 0; i < inputClearSearch.length; i++) {
-    //     let btn = inputClearSearch[i];
-    //     inputSearch.addEventListener('click', function (e) {
-    //         btn.classList.add('search__clear--active');
-    //     })
-    //     btn.addEventListener('click', function () {
-    //         inputSearch.value = '';
-    //         btn.classList.remove('search__clear--active');
-    //
-    //     })
-    //
-    //     window.addEventListener('mouseup', e => {
-    //         if (btn.classList.contains('search__clear--active') && e.target != inputSearch) {
-    //             btn.classList.remove('search__clear--active');
-    //         }
-    //     });
-    // }
     let btn = document.querySelectorAll('a[href^="tel:"]');
 
     let resizeWindow = function (evt) {
@@ -85,6 +61,24 @@ window.onload = function () {
         item.addEventListener('resize', resizeWindow);
     });
 
+
+
+
+    let boxMore = document.querySelectorAll('.title-box');
+    let btnMore = document.querySelectorAll('.button');
+
+    btnMore.forEach((btn) => {
+        btn.addEventListener('click', function(ev) {
+            boxMore.forEach((box) => {
+                if (box != this.parentElement) { box.classList.remove('title-box-active'); }
+            });
+            this.parentElement.classList.toggle('title-box-active');
+        });
+    });
+
+
+
+
 }
 
 
@@ -94,3 +88,17 @@ window.onload = function () {
 
 
 
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
