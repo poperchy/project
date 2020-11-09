@@ -166,6 +166,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
+    outline: none;
     position: absolute;
     top: 50%;
     width: calc(var(--swiper-navigation-size) / 44 * 27);
