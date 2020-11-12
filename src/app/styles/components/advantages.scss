@@ -7,6 +7,7 @@
   flex-direction: column;
   text-align: left;
   width: fit-content;
+  margin-left: 17px;
 
   h3{
     font-style: normal;
@@ -36,6 +37,7 @@
   }
   &__wrap {
     display: flex;
+    gap: 10px;
   }
 
   &__tabs-img, &__boxes {
@@ -50,7 +52,12 @@
   }
 
 }
-
+.title-box-active{
+  margin-left: 20px;
+}
+.title-box-active .advantages__wrap-desc{
+  margin-left: 20px;
+}
 .title-box-active p {
   min-height: 50px;
   height: 100%;
@@ -67,42 +74,74 @@
 
 .btn-img{
   position: relative;
-  width: 77px;
-  transition: 0.2s;
+  width: 141px;
+  height: 116px;
+  border-radius: 100%;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img:nth-child(2){
     position: absolute;
     width: 50px;
     top: 50%;
-    left: 50%;
+    left: 50.17%;
     transform: translate(-50%, -50%);
+  }
+}
+.title-box{
+  height: 118px;
+  display: flex;
+  align-items: center;
+
+  &:first-child{
+    padding-top: 20px;
+  }
+  &:last-child{
+    padding-bottom: 20px;
   }
 }
 .title-box .active{
   img:nth-child(1){
     visibility: hidden;
-    transition: 0.05s;
+    transition: 0s;
   }
   img:nth-child(2){
     transform: translate(-50%, -50%) scale(1.1);
-    transition: 0.2s;
+    transition: 1s;
   }
   .btn-img{
     background: #F3F4F6;
     box-shadow: 2px -2px 10px #FFFFFF, -1px 1px 2px #DDE4EE, -1px 1px 15px #DDE4EE, inset 2px -2px 8px #FFFFFF, inset 2px -2px 8px #FFFFFF, inset -1px 2px 2px rgba(134, 163, 197, 0.85), inset -2px 4px 10px rgba(134, 163, 197, 0.95);
-    border-radius: 50%;
-    transition: 0.2s;
+    border-radius: 100%;
+    transition: 1s;
     width: 141px;
     height: 116px;
   }
   .advantages__wrap-content{
-    margin-left: -22px;
+    margin-left: -20px;
   }
+}
+
+//.title-box:nth-child(2) .btn-img img:nth-child(2){
+//  top: 52%;
+//}
+
+
+
+
+.title-box:nth-child(3) .btn-img img:nth-child(2){
+  transform: translate(-50%, -50%) scale(1);
+}
+  .title-box:nth-child(3).title-box-active .btn-img img:nth-child(2){
+  transform: translate(-50%, -50%) scale(1.2);
 }
 .tabcontent {
   display: none;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
+  height: 100%;
 }
 
 @-webkit-keyframes fadeEffect {

@@ -22,8 +22,8 @@ window.onload = function () {
     let inputSearch = document.querySelectorAll('input[type="search"]');
     let inputClearSearch = document.querySelectorAll('.search__clear');
 
-    inputClearSearch.forEach(function eax (e, i,) {
-        inputSearch.forEach(function eaxe ( e, i) {
+    inputClearSearch.forEach(function eax(e, i,) {
+        inputSearch.forEach(function eaxe(e, i) {
             inputSearch[i].addEventListener('click', function () {
                 inputClearSearch[i].classList.add('search__clear--active');
             })
@@ -33,7 +33,6 @@ window.onload = function () {
 
             })
         })
-
 
 
         window.addEventListener('mouseup', e => {
@@ -62,30 +61,22 @@ window.onload = function () {
     });
 
 
-
-
     let boxMore = document.querySelectorAll('.title-box');
     let btnMore = document.querySelectorAll('.button');
 
     btnMore.forEach((btn) => {
-        btn.addEventListener('click', function(ev) {
+        btn.addEventListener('click', function (ev) {
             boxMore.forEach((box) => {
-                if (box != this.parentElement) { box.classList.remove('title-box-active'); }
+                if (box != this.parentElement) {
+                    box.classList.remove('title-box-active');
+                }
             });
             this.parentElement.classList.toggle('title-box-active');
         });
     });
 
 
-
-
 }
-
-
-
-
-
-
 
 
 function openCity(evt, cityName) {
@@ -101,4 +92,5 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
 document.getElementById("defaultOpen").click();
