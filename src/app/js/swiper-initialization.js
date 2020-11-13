@@ -13,8 +13,8 @@ var swiper = new Swiper('.swiper-main', {
 });
 
 var swiper = new Swiper('.swiper-popular', {
-    slidesPerView: 4,
-    spaceBetween: 15,
+    slidesPerView: 5,
+    spaceBetween: 10,
     loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
@@ -38,6 +38,9 @@ var swiper = new Swiper('.swiper-popular', {
         },
         1098: {
             slidesPerView: 4,
+        },
+        1350:{
+            slidesPerView: 5,
         },
         // when window width is >= 320px
         1454: {

@@ -50,12 +50,15 @@
 .swiper-popular {
   position: static;
   padding: 10px 0;
+  min-height: 378px;
 
   .swiper-button-prev{
     left: -22px;
+    top:43%;
   }
   .swiper-button-next{
     right: -22px;
+    top:43%;
   }
 
   .swiper-button-prev:after, .swiper-button-next:after {

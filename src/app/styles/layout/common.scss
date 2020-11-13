@@ -5,7 +5,9 @@ body {
   color: #123D6F;
   overflow-x: hidden;
 }
-
+button{
+  outline: transparent;
+}
 h1 {
   font-size: 30px;
 }
@@ -44,6 +46,7 @@ button {
   padding: 17px 25px;
   cursor: pointer;
   color: #FFFFFF;
+  border: none;
   transition: 0.25s;
   z-index: 1;
 
@@ -53,21 +56,30 @@ button {
     top: 0;
     right: 0;
     bottom: 0;
+    border-radius: 5px;
     left: 0;
     background: linear-gradient(104.72deg, #940909 10.01%, #EB1414 76.88%);
     z-index: -1;
-    transition: opacity 0.25s linear;
     opacity: 0;
+    transition: 0.25s;
   }
 
   &:hover:before{
     opacity: 1;
+    transition: 0.25s;
   }
   &:hover{
     background: linear-gradient(104.72deg, #940909 10.01%, #EB1414 76.88%);
     box-shadow: inset 0px -2px 3px rgba(85, 6, 6, 0.6), inset 3px 2px 4px rgba(255, 54, 54, 0.8);
     border-radius: 5px;
     transition: 0.2s;
+  }
+  &:active:before{
+    opacity: 1;
+    background: linear-gradient(104.72deg, #940909 -6.49%, #EB1414 76.88%);
+    box-shadow: 0px 4px 30px rgba(114, 132, 160, 0.4), inset 0px 2px 3px rgba(85, 6, 6, 0.6), inset -6px -2px 4px rgba(255, 54, 54, 0.8);
+    border-radius: 35px 2px 35px 2px;
+    transition: 0s;
   }
   &:active{
     background: linear-gradient(104.72deg, #940909 -6.49%, #EB1414 76.88%);
