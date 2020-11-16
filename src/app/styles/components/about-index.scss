@@ -2,6 +2,7 @@
   background: #F3F4F6;
   &__wrap {
     display: flex;
+    min-height: 500px;
   }
 
   &__img {
