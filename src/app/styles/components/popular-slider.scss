@@ -142,4 +142,8 @@
     flex-direction: column;
     z-index: 2;
   }
-}
+}.popular-slider__link{
+  @include mobile{
+    margin-bottom: 20px;
+  }
+ }
