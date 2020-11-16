@@ -8,4 +8,14 @@
         } %}
     {% include 'components/popular-slider.twig' %}
     {% include 'components/advantages.twig' %}
+    {% include 'components/section-title.twig' with
+        {
+            title: 'Каталог товаров',
+        } %}
+    {% include 'components/product-catalog.twig' %}
+    {% include 'components/section-title.twig' with
+        {
+            title: 'Новое в блоге',
+        } %}
+    {% include 'components/about-index.twig' %}
 {% endblock %}
