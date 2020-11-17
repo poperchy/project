@@ -1,0 +1,144 @@
+.new-in-blog {
+  &__link {
+    margin: 40px 0 60px 0;
+    text-align: center;
+
+    a {
+      display: inline-block;
+    }
+    @include tablet{
+      margin: 20px 0 40px 0;
+    }
+    @include mobile{
+      margin: 20px 0 40px 0;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(1, auto);
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, auto);
+    }
+  }
+
+  &__item {
+    display: flex;
+    box-shadow: 0px 2px 7px rgba(64, 93, 114, 0.4);
+    border-radius: 5px;
+    padding: 44px 27px 44px 27px;
+    height: 212px;
+    @include mobile {
+      height: 93px;
+      padding: 19px 12px;
+    }
+
+    img {
+      width: 212px;
+      height: 212px;
+      @include mobile {
+        width: 92px;
+        height: 92px;
+      }
+    }
+  }
+
+  &__desc-wrap {
+    margin-left: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    @include mobile {
+      margin-left: 9.5px;
+    }
+
+    h4 {
+      margin-bottom: 24px;
+      font-size: 20px;
+      line-height: 26px;
+      @include mobile {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+      }
+
+    }
+
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      color: #123D6F;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__detail {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    @include mobile {
+      margin-top: 0;
+    }
+
+    span {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      color: #BE0E0E;
+      opacity: 0.6;
+      @include mobile {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      text-decoration: underline;
+      color: #BE0E0E;
+      transition: 0.2s;
+      white-space: nowrap;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      svg {
+        height: 9px;
+        margin-left: 10px;
+      }
+
+      &:hover {
+        color: #123D6F;
+        transition: 0.2s;
+
+        svg path {
+          fill: #123D6F;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}

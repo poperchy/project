@@ -69,11 +69,9 @@ window.onload = function () {
             boxMore.forEach((box) => {
                 if (box != this.parentElement) {
                     box.classList.remove('title-box-active');
-                    box.style.maxHeight = null;
                 }
             });
             this.parentElement.classList.add('title-box-active');
-            this.parentElement.style.maxHeight = panel.scrollHeight + "px";
         });
     });
 }
@@ -82,7 +80,7 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
+    acc[i].addEventListener("click", function () {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         if (panel.style.maxHeight) {
@@ -92,9 +90,6 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
-
-
-
 
 
 function openCity(evt, cityName) {
@@ -114,4 +109,10 @@ function openCity(evt, cityName) {
 document.getElementById("defaultOpen").click();
 
 
+var boxMoretwo = document.querySelector('.desc-box');
+var btnMoretwo = document.querySelector('.about-index__btn');
+
+btnMoretwo.addEventListener('click', function (ev) {
+    boxMoretwo.classList.toggle('desc-box-active');
+});
 
