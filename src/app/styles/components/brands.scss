@@ -1,0 +1,11 @@
+.brands {
+
+  .container {
+    @include tablet {
+      padding: 0;
+    }
+    @include mobile {
+      padding: 0;
+    }
+  }
+}

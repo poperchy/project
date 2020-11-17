@@ -5,9 +5,11 @@ body {
   color: #123D6F;
   overflow-x: hidden;
 }
-button{
+
+button {
   outline: transparent;
 }
+
 h1 {
   font-size: 30px;
 }
@@ -51,7 +53,7 @@ button {
   transition: 0.25s;
   z-index: 1;
 
-  &:before{
+  &:before {
     position: absolute;
     content: "";
     top: 0;
@@ -65,24 +67,27 @@ button {
     transition: 0.25s;
   }
 
-  &:hover:before{
+  &:hover:before {
     opacity: 1;
     transition: 0.25s;
   }
-  &:hover{
+
+  &:hover {
     background: linear-gradient(104.72deg, #940909 10.01%, #EB1414 76.88%);
     box-shadow: inset 0px -2px 3px rgba(85, 6, 6, 0.6), inset 3px 2px 4px rgba(255, 54, 54, 0.8);
     border-radius: 5px;
     transition: 0.2s;
   }
-  &:active:before{
+
+  &:active:before {
     opacity: 1;
     background: linear-gradient(104.72deg, #940909 -6.49%, #EB1414 76.88%);
     box-shadow: 0px 4px 30px rgba(114, 132, 160, 0.4), inset 0px 2px 3px rgba(85, 6, 6, 0.6), inset -6px -2px 4px rgba(255, 54, 54, 0.8);
     border-radius: 35px 2px 35px 2px;
     transition: 0s;
   }
-  &:active{
+
+  &:active {
     background: linear-gradient(104.72deg, #940909 -6.49%, #EB1414 76.88%);
     box-shadow: 0px 4px 30px rgba(114, 132, 160, 0.4), inset 0px 2px 3px rgba(85, 6, 6, 0.6), inset -6px -2px 4px rgba(255, 54, 54, 0.8);
     border-radius: 35px 2px 35px 2px;
@@ -90,7 +95,7 @@ button {
 
   }
 
-  &--border{
+  &--border {
     position: relative;
     background: linear-gradient(104.72deg, #EB1414 5.14%, #940909 76.88%);
     box-shadow: 0px 4px 30px rgba(114, 132, 160, 0.4), inset 0px -2px 3px rgba(85, 6, 6, 0.6), inset 6px 2px 4px rgba(255, 54, 54, 0.8);
@@ -105,21 +110,21 @@ button {
     line-height: 26px;
     border-radius: 35px 2px 35px 2px;
 
-    @include tablet{
+    @include tablet {
       font-style: normal;
       font-weight: bold;
       font-size: 16px;
       line-height: 24px;
       padding: 12px 25px;
     }
-    @include mobile{
+    @include mobile {
       display: none;
       font-size: 16px;
       line-height: 24px;
       padding: 12px 25px;
     }
 
-    &:after{
+    &:after {
       position: absolute;
       content: "";
       top: 0;
@@ -129,22 +134,24 @@ button {
       border-radius: 35px 2px 35px 2px;
       background: linear-gradient(104.72deg, #940909 -6.49%, #EB1414 76.88%);
       z-index: -1;
-          transition: opacity 0.25s linear;
+      transition: opacity 0.25s linear;
       opacity: 0;
     }
 
-    &:hover:after{
+    &:hover:after {
       background: linear-gradient(104.72deg, #940909 -6.49%, #EB1414 76.88%);
       border-radius: 35px 2px 35px 2px;
       box-shadow: inset 0px 2px 3px rgba(85, 6, 6, 0.6), inset -6px -2px 4px rgba(255, 54, 54, 0.8);
       transition: 0.25s;
       opacity: 1;
     }
-    &:active:after{
+
+    &:active:after {
       border-radius: 5px;
       transition: opacity 0s linear;
     }
-    &:active{
+
+    &:active {
       background: linear-gradient(123.35deg, #940909 8.97%, #EB1414 74.03%);
       box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.15), inset 0px -2px 3px rgba(85, 6, 6, 0.6), inset 3px 2px 4px rgba(255, 54, 54, 0.8);
       transition: 0s;
@@ -152,12 +159,13 @@ button {
   }
 
 }
-.show-mobile{
+
+.show-mobile {
   display: none;
-  @include tablet{
+  @include tablet {
     display: none;
   }
-  @include mobile{
+  @include mobile {
     display: flex;
   }
 }
@@ -210,7 +218,8 @@ button {
 ::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
-.ml-auto{
+
+.ml-auto {
   margin-left: auto;
 }
 
@@ -249,12 +258,12 @@ button {
   margin-left: 10px;
 }
 
-.hide-desktop{
+.hide-desktop {
   display: none !important;
-  @include tablet{
+  @include tablet {
     display: block !important;
   }
-  @include mobile{
+  @include mobile {
     display: block !important;
   }
 }

@@ -52,3 +52,34 @@ var swiper = new Swiper('.swiper-popular', {
 
 });
 
+var swiper = new Swiper('.swiper-brands', {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    loopPreventsSlide: 0,
+    breakpoints: {
+        320:{
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        490:{
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        767:{
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        1025: {
+            slidesPerView: 4,
+        },
+        1300:{
+            slidesPerView: 5,
+        },
+    },
+});
