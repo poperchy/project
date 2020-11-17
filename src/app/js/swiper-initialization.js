@@ -55,7 +55,6 @@ var swiper = new Swiper('.swiper-popular', {
 var swiper = new Swiper('.swiper-brands', {
     slidesPerView: 5,
     spaceBetween: 30,
-    slidesPerGroup: 1,
     loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
@@ -77,8 +76,10 @@ var swiper = new Swiper('.swiper-brands', {
         },
         1025: {
             slidesPerView: 4,
+            slidesPerGroup: 1,
         },
         1300:{
+            slidesPerGroup: 1,
             slidesPerView: 5,
         },
     },

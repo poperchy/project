@@ -1,5 +1,8 @@
 .advantages {
-
+.container{
+  padding: 0;
+  max-width: none;
+}
   background: #F3F4F6;
 
   @include mobile {
@@ -74,15 +77,21 @@
   }
 
   &__boxes {
+    padding-left: 33px;
     @media(max-width: 1200px) and (min-width: 1025px) {
       padding: 20px 0;
+      padding-left: 33px;
+    }
+    @include tablet{
+      padding-left: 10px;
+      padding-right: 40px;
     }
   }
 
   &__tabs-img, &__boxes {
     width: 50%;
     @include tablet {
-      width: 100%;
+      width: 95%;
     }
     @include mobile {
       display: none;
