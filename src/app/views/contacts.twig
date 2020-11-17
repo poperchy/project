@@ -1,0 +1,10 @@
+{% extends 'layout/base.twig' %}
+{% block title %}Пасена{% endblock %}
+{% block body %}
+{% include 'components/breadcrumbs.twig' %}
+    {% include 'components/section-title.twig' with
+        {
+            title: 'Контакты',
+        } %}
+    {% include 'components/communication.twig' %}
+{% endblock %}

@@ -1,0 +1,38 @@
+.breadcrumbs {
+  margin-top: 21px;
+  ul {
+    display: flex;
+    gap: 40px;
+  }
+
+  li {
+    a {
+      position: relative;
+      color: #156D9D;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 7px;
+        height: 11px;
+        top: 56%;
+        right: -27px;
+        transform: translateY(-50%);
+        background: url("../images/breadcrumbsArrow.svg") no-repeat;
+      }
+    }
+  }
+
+  &__active {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #808080;
+  }
+}
