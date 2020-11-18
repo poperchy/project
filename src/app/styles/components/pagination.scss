@@ -1,0 +1,48 @@
+.pagination {
+  display: flex;
+  margin: 60px 0;
+  @include tablet{
+    margin: 20px 0;
+  }
+  @include mobile{
+    margin: 20px 0;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 20px;
+    color: #808080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link--active {
+    width: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    height: 29px;
+    background: #156D9D;
+    border-radius: 20px;
+  }
+
+  &__prev, &__next {
+    display: inline-block;
+    width: 12px;
+    height: 18px;
+    background: url('../images/pag-arrow.svg') no-repeat center;
+  }
+  &__next{
+    transform: rotate(-180deg);
+    margin-left: 10px;
+  }
+  &__prev{
+    margin-right: 10px;
+  }
+}

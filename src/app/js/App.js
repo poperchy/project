@@ -74,6 +74,7 @@ window.onload = function () {
             this.parentElement.classList.add('title-box-active');
         });
     });
+
 }
 
 var acc = document.getElementsByClassName("accordion");
@@ -106,13 +107,18 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
-document.getElementById("defaultOpen").click();
+var defaultOpen = document.getElementById("defaultOpen");
+if (defaultOpen) {
+    defaultOpen.click();
+}
 
 
 var boxMoretwo = document.querySelector('.desc-box');
 var btnMoretwo = document.querySelector('.about-index__btn');
+if(btnMoretwo){
+    btnMoretwo.addEventListener('click', function (ev) {
+        boxMoretwo.classList.toggle('desc-box-active');
+    });
+}
 
-btnMoretwo.addEventListener('click', function (ev) {
-    boxMoretwo.classList.toggle('desc-box-active');
-});
 

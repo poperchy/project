@@ -1,0 +1,329 @@
+.form-map {
+  @include tablet {
+    background: #F5F6F8;
+    margin-top: 30px;
+  }
+  @include mobile {
+    background: #F5F6F8;
+    margin-top: 16px;
+  }
+
+  .container {
+    @include tablet {
+      padding: 0;
+    }
+    @include mobile {
+      padding: 0;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      margin-bottom: 0;
+    }
+    @include mobile {
+      flex-direction: column-reverse;
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    margin-bottom: 25px;
+    margin-top: 50px;
+    border: none;
+    height: 1px;
+    background: #DDDDDD;
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__form, &__map {
+    width: 50%;
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__map {
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+    @include tablet {
+      height: 370px;
+      border: transparent;
+    }
+    @include mobile {
+      height: 330px;
+      border: transparent;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F5F6F8;
+    border-radius: 5px;
+    padding: 38px 47px 40px 47px;
+    @include tablet {
+      padding: 0;
+      padding-bottom: 40px;
+    }
+    @include mobile {
+      padding: 0;
+      padding-bottom: 20px;
+    }
+
+    h4 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 40px;
+      @include mobile {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 26px;
+      @include mobile {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  form {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    @include tablet {
+      max-width: 600px;
+    }
+    @include mobile {
+      max-width: -webkit-fill-available;
+      padding: 0 20px;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 26px;
+      @include mobile {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    textarea {
+      background: #FFFFFF;
+      box-shadow: 0px 2px 10px rgba(64, 93, 114, 0.35);
+      border-radius: 5px;
+      resize: none;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 11px 0 0 17px;
+      outline: transparent;
+      border: 2px solid transparent;
+      @include mobile{
+        margin-top: 10px;
+      }
+
+      &:focus {
+        border: 2px solid #cecece;
+      }
+    }
+
+    button {
+      padding: 12px 25px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 26px;
+      
+      @include tablet{
+        display: block;
+      }
+      @include mobile{
+        display: block;
+      }
+    }
+  }
+
+  &__wrap-input {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    @include mobile {
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    label {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 10px rgba(64, 93, 114, 0.35);
+      border-radius: 5px;
+      padding-left: 17px;
+      height: 50px;
+      border: 2px solid transparent;
+      outline: none;
+
+      &:focus {
+        border: 2px solid #cecece;
+      }
+    }
+  }
+
+  &__wrap-checkbox {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+
+    @include mobile{
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    label {
+      position: relative;
+      padding-left: 35px;
+      cursor: pointer;
+    }
+
+    input {
+      position: absolute;
+      appearance: none;
+    }
+
+    span {
+      left: 0;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #C4C9CF;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background: #FFFFFF;
+      transition: 0.2s;
+    }
+
+    input:checked + span {
+      border: 1px solid #123D6F;
+      background: url("../images/checked.svg") no-repeat center;
+    }
+  }
+}
+
+
+.ymap-container {
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  background: url('../images/preload-map.jpg') #ffffff no-repeat center;
+  @include tablet {
+    background-size: cover;
+  }
+  @include mobile {
+
+  }
+}
+
+/* Блок, в котором появится Яндекс.Карта */
+#map-yandex {
+  position: relative;
+  z-index: 7;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+
+}
+
+.loader {
+  position: absolute;
+  z-index: 15;
+  top: -100%;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000000;
+  transition: opacity .7s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, .55);
+}
+
+.loader:after,
+.loader:before {
+  box-sizing: border-box;
+}
+
+.loader.is-active {
+  top: 0;
+  opacity: 1;
+}
+
+.loader-default:after {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  content: '';
+  animation: rotation 1s linear infinite;
+  border: solid 8px #ffffff;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}

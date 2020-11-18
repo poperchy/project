@@ -1,0 +1,16 @@
+.blog {
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+
+    @include tablet{
+      grid-template-columns: repeat(1,auto);
+      gap: 20px;
+    }
+    @include mobile{
+      grid-template-columns: repeat(1,auto);
+      gap: 10px;
+    }
+  }
+}

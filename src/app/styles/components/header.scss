@@ -1,6 +1,9 @@
 .header {
   background: #F3F4F6;
   box-shadow: 0px 2px 15px rgba(12, 32, 56, 0.4), inset 0px -10px 20px #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   &__wrap {
     position: relative;
