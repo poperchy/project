@@ -1,4 +1,24 @@
 window.onload = function () {
+        $('[data-fancybox="reviews-photo"]').fancybox({
+            buttons: [
+                'slideShow',
+                'share',
+                'zoom',
+                'fullScreen',
+                'close',
+            ],
+        });
+
+    $('[data-fancybox="about-us-slider"]').fancybox({
+        buttons: [
+            'slideShow',
+            'share',
+            'zoom',
+            'fullScreen',
+            'close',
+        ],
+    });
+
     const navMenu = document.querySelector('.nav__menu');
     const burgerBtn = document.querySelector('.burger__btn');
     const body = document.querySelector('body');
@@ -115,7 +135,7 @@ if (defaultOpen) {
 
 var boxMoretwo = document.querySelector('.desc-box');
 var btnMoretwo = document.querySelector('.about-index__btn');
-if(btnMoretwo){
+if (btnMoretwo) {
     btnMoretwo.addEventListener('click', function (ev) {
         boxMoretwo.classList.toggle('desc-box-active');
     });

@@ -1,0 +1,168 @@
+{% extends 'layout/base.twig' %}
+{% block title %}Пасена{% endblock %}
+{% block body %}
+    {% include 'components/breadcrumbs.twig' %}
+    {% include 'components/section-title.twig' with
+        {
+            title: 'Отзывы',
+        } %}
+    <section class="reviews">
+        <div class="container">
+            <div class="reviews__slider">
+                <div class="swiper-container swiper-reviews">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="reviews__item">
+                                <div class="reviews__item--head">
+                                    <div class="reviews__item--head-wrap">
+                                        <h3>ОАО "Стройдетали"</h3>
+                                        <div class="reviews__stars">
+                                            <span class="star-rating star-rating-results"><i></i></span>
+                                        </div>
+                                    </div>
+
+                                    <span class="reviews__time">25.03.2020</span>
+                                </div>
+                                <div class="reviews__item--content">
+                                    <p>Хотелось бы выразить свою благодарность компании “PASENA” за помощь в выборе
+                                        и быструю доставку качественной продукции. Заказывали канистры на 5 и 8
+                                        литров для хранения и перевозки химической продукции. Хочетя отметить
+                                        удобство хранеения канистр и долгосрочность эксплуатации, а также удобное
+                                        расположения склада и помощь в погрузке товара.</p>
+                                </div>
+                                <div class="reviews__item--quality">
+                                        <span class="reviews__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                            <ellipse cx="7.89307" cy="8.46306" rx="7.25439" ry="7.48162"
+                                                     fill="#219653"/>
+                                            <line x1="7.9082" y1="3.97461" x2="7.9082" y2="12.9526" stroke="white"/>
+                                            <line x1="3.53906" y1="8.46191" x2="12.2443" y2="8.46191" stroke="white"/>
+                                            </svg>
+                                            <span>Качество, цена</span>
+                                        </span>
+                                    <span class="reviews__minus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                            <ellipse cx="7.89307" cy="8.40447" rx="7.25439" ry="7.48162"
+                                                     fill="#DD002C"/>
+                                            <line x1="4" y1="8.5" x2="11.7918" y2="8.5" stroke="white"/>
+                                            </svg>
+                                            <span>Нет</span>
+                                        </span>
+                                </div>
+                                <div class="reviews__item--feedback">
+                                    <div class="reviews__admin">
+                                        <img src="images/ad-pac.svg" alt="">
+                                        <h3>Admin</h3>
+                                    </div>
+                                    <p>Спасибо за Ваш отзыв! Будем рады продолжать сотрудничество</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__item">
+                                <div class="reviews__item--head">
+                                    <div class="reviews__item--head-wrap">
+                                        <h3>ОАО "Стройдетали"</h3>
+                                        <div class="reviews__stars">
+                                            <span class="star-rating star-rating-results"><i></i></span>
+                                        </div>
+                                    </div>
+
+                                    <span class="reviews__time">25.03.2020</span>
+                                </div>
+                                <div class="reviews__item--content">
+                                    <p>Хотелось бы выразить свою благодарность компании “PASENA” за помощь в выборе
+                                        и быструю доставку качественной продукции.</p>
+                                </div>
+                                <div class="reviews__item--quality">
+                                        <span class="reviews__plus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                            <ellipse cx="7.89307" cy="8.46306" rx="7.25439" ry="7.48162"
+                                                     fill="#219653"/>
+                                            <line x1="7.9082" y1="3.97461" x2="7.9082" y2="12.9526" stroke="white"/>
+                                            <line x1="3.53906" y1="8.46191" x2="12.2443" y2="8.46191" stroke="white"/>
+                                            </svg>
+                                            <span>Качество, цена</span>
+                                        </span>
+                                    <span class="reviews__minus">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                            <ellipse cx="7.89307" cy="8.40447" rx="7.25439" ry="7.48162"
+                                                     fill="#DD002C"/>
+                                            <line x1="4" y1="8.5" x2="11.7918" y2="8.5" stroke="white"/>
+                                            </svg>
+                                            <span>Нет</span>
+                                        </span>
+                                </div>
+                                <div class="reviews__item--feedback">
+                                    <div class="reviews__admin">
+                                        <img src="images/ad-pac.svg" alt="">
+                                        <h3>Admin</h3>
+                                    </div>
+                                    <p>Спасибо за Ваш отзыв! Будем рады продолжать сотрудничество</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="reviews__wrap">
+        <div class="container">
+            <div class="popular-slider__link">
+                <a href="#" class="btn--border">Оставить отзыв</a>
+            </div>
+            <div class="reviews__reviews-photo">
+                <a href="images/reviews-photo.jpg" data-fancybox="reviews-photo"><img src="images/reviews-photo.jpg"
+                                                                                      alt=""></a>
+                <a href="images/reviews-photo.jpg" data-fancybox="reviews-photo"><img src="images/reviews-photo.jpg"
+                                                                                      alt=""></a>
+                <a href="images/reviews-photo.jpg" data-fancybox="reviews-photo"><img src="images/reviews-photo.jpg"
+                                                                                      alt=""></a>
+                <a href="images/reviews-photo.jpg" data-fancybox="reviews-photo"><img src="images/reviews-photo.jpg"
+                                                                                      alt=""></a>
+            </div>
+            <button type="button" class="btn--border-red show-mobile">Показать ещё</button>
+        </div>
+    </div>
+    <div class="reviews__form" style="background-image: url('images/reviews-form.jpg')">
+
+
+        <div class="container">
+            <div class="reviews__form-wrap">
+                <h4>Оставьте отзыв</h4>
+                <form action="#">
+                    <div class="form-group reviews__stars">
+                        <label for="rate">Оцените магазин</label>
+                        <span class="star-rating">
+                            <input type="radio" name="rate" value="1" checked=""><i></i>
+                            <input type="radio" name="rate" value="2"><i></i>
+                            <input type="radio" name="rate" value="3"><i></i>
+                            <input type="radio" name="rate" value="4"><i></i>
+                            <input type="radio" name="rate" value="5"><i></i>
+				        </span>
+                    </div>
+                    <div class="reviews__wrap-input">
+                        <div class="reviews__wrap-label">
+                            <label><input type="text" placeholder="Ваше имя"></label>
+                            <label><input type="email" placeholder="Ваш E-mail"></label>
+                        </div>
+                        <div class="reviews__wrap-label">
+                            <label><input class="input-green" type="text" placeholder="Преимущества"></label>
+                            <label><input class="input-red" type="text" placeholder="Недостатки"></label>
+                        </div>
+                    </div>
+                    <textarea rows="10" placeholder="Напишите сообщение..."></textarea>
+                    <button class="btn--border" type="button">Оставить отзыв</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% include 'layout/footer.twig' %}
+{% endblock %}

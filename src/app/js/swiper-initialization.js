@@ -39,7 +39,7 @@ var swiper = new Swiper('.swiper-popular', {
         1098: {
             slidesPerView: 4,
         },
-        1350:{
+        1350: {
             slidesPerView: 5,
         },
         // when window width is >= 320px
@@ -62,15 +62,15 @@ var swiper = new Swiper('.swiper-brands', {
     },
     loopPreventsSlide: 0,
     breakpoints: {
-        320:{
+        320: {
             slidesPerView: 2,
             spaceBetween: 20,
         },
-        490:{
+        490: {
             slidesPerView: 3,
             spaceBetween: 20,
         },
-        767:{
+        767: {
             slidesPerView: 4,
             spaceBetween: 20,
         },
@@ -78,9 +78,57 @@ var swiper = new Swiper('.swiper-brands', {
             slidesPerView: 4,
             slidesPerGroup: 1,
         },
-        1300:{
+        1300: {
             slidesPerGroup: 1,
             slidesPerView: 5,
+        },
+    },
+});
+
+var swiper = new Swiper('.swiper-reviews', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    loopPreventsSlide: 0,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        320:{
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 100,
+        },
+        1024:{
+            spaceBetween: 10,
+        },
+        1480: {
+            spaceBetween: 30,
+        },
+    },
+});
+
+var swiper = new Swiper('.swiper-about-us', {
+    slidesPerView: 4,
+    spaceBetween: 25,
+    loop:true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        320:{
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 15,
+        },
+        1024:{
+            spaceBetween: 25,
+        },
+        1480: {
+            spaceBetween: 25,
         },
     },
 });
