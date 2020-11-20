@@ -1,15 +1,16 @@
 .catalog {
   margin-top: 60px;
+
   &__filters {
     padding: 0 27px 0 20px;
 
-    .btn--filter{
+    .btn--filter {
       border-radius: 2px;
       padding: 16px 39px;
       display: flex;
       margin: 40px auto;
 
-      &:before{
+      &:before {
         border-radius: 2px;
       }
     }
@@ -103,18 +104,21 @@
   }
 
   &__items {
-    display: flex;
+    display: grid;
     gap: 10px;
+    grid-template-columns: repeat(1, auto);
     flex-wrap: wrap;
 
-    @media(min-width:1385px)and(max-width:1463px){
+    @media(min-width: 1385px) and(max-width: 1463px) {
       //gap: 13px;
     }
 
     .card-product {
       margin: 0;
-      width: 20%;
-      flex-grow: 1;
+      width: auto;
+      max-height: none;
+      max-width: none;
+      height: auto;
 
 
       .card-product__btn-wrap {
@@ -137,6 +141,7 @@
         padding-right: 55px;
         gap: 17px;
         justify-content: space-between;
+
 
         .popular-slider__img-wrap {
           flex-direction: row;
@@ -186,6 +191,10 @@
   }
 }
 
+.tile-row--active {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
 
 .select-hidden {
   display: none;
@@ -362,12 +371,13 @@
 }
 
 .catalog__filters-checkbox-wrap {
-  p{
+  p {
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
     color: #123D6F;
   }
+
   margin: 20px 0;
   width: 100%;
   display: flex;
