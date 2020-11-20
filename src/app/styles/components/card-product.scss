@@ -10,6 +10,11 @@
   height: 100%;
   transition: 0.2s;
 
+  &__wrap-price{
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__hover{
     opacity:0;
     top: 0;
@@ -51,6 +56,8 @@
   }
 
 &__btn{
+  display: flex;
+  flex-direction: column;
   button{
     font-style: normal;
     font-weight: normal;
@@ -121,6 +128,8 @@ display: flex;
   }
 
   .price-wrap {
+    width: 100%;
+
     &--normal {
       margin-top: 30px;
     }

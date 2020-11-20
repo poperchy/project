@@ -51,8 +51,9 @@ button {
   cursor: pointer;
   color: #FFFFFF;
   border: none;
-  transition: 0.25s;
   z-index: 1;
+  transition: 0.25s;
+
 
 
   &--border-red {
@@ -253,7 +254,7 @@ button {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 90;
+  z-index: 249;
   background: rgba(0, 0, 0, 0.3);
   height: 10000%;
 }
@@ -345,4 +346,7 @@ button {
 
 .footer--no-border {
   border-top: transparent;
+}
+.in-stock--action{
+  display: none;
 }

@@ -10,6 +10,7 @@
   }
 
   &__link-wrap {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,15 +35,17 @@
 
   .magnifier {
     position: absolute;
-    left: 63%;
+    left: 32%;
     top: -6%;
-    transform: translateX(-50%);
+    animation: magnifier 4s linear infinite;
+
   }
 
   .circle-s-1 {
     position: absolute;
     top: -50px;
     left: -30%;
+    animation: upDown 3s linear infinite;
   }
 
   .circle {
@@ -121,11 +124,48 @@
     position: absolute;
     top: -25%;
     right: 10%;
+
   }
 
   .cross-w2 {
     position: absolute;
     bottom: 5%;
     right: -25%;
+    animation: rotateR 5s linear infinite;
+    transition: 0.2s;
+  }
+}
+
+@keyframes rotateR {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50%{
+    transform: rotate(180deg) scale(1.2);
+}
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+@keyframes magnifier   {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes upDown   {
+  0% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
