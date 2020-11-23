@@ -132,3 +132,20 @@ var swiper = new Swiper('.swiper-about-us', {
         },
     },
 });
+
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween:10,
+    slidesPerView: 3,
+    freeMode: true,
+    direction: 'vertical',
+    loopedSlides: 5,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+});
+var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 60,
+    loopedSlides: 3,
+    thumbs: {
+        swiper: galleryThumbs,
+    },
+});

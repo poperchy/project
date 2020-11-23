@@ -2,9 +2,22 @@
   display: flex;
   margin: 30px 0 65px 0;
   gap: 60px;
+  @include tablet {
+    flex-direction: column;
+  }
+  @include mobile {
+    flex-direction: column;
+    gap: 25px;
+  }
 
   &__content-wrap, &__form-wrap {
     width: 50%;
+    @include tablet {
+      width: auto;
+    }
+    @include mobile {
+      width: auto;
+    }
   }
 
   &__content-wrap {
@@ -18,6 +31,12 @@
       letter-spacing: 0.02em;
       color: #123D6F;
       margin-bottom: 10px;
+
+      &:last-child {
+        @include mobile {
+          display: none;
+        }
+      }
 
       span {
         font-weight: bold;
@@ -39,6 +58,17 @@
       justify-content: center;
       gap: 20px;
       margin-bottom: 30px;
+      svg{
+        @include mobile{
+          display: none;
+        }
+
+      }
+      @include mobile {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -49,20 +79,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include mobile {
+      padding: 20px 10px 20px 10px;
+    }
 
     &-content {
       margin-bottom: 40px;
+
+      @include mobile{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
       div {
         display: flex;
-        align-items: center;
         gap: 15px;
-
-        &:first-child {
-          img {
-            margin-top: -10px;
-          }
-        }
-
+        align-items: end;
       }
     }
 
@@ -75,8 +108,12 @@
       font-size: 16px;
       line-height: 26px;
       margin-bottom: 10px;
+      @include mobile {
+        font-size: 14px;
+        line-height: 18px;
+      }
 
-      &:last-child{
+      &:last-child {
         margin-bottom: 0;
       }
 
@@ -87,17 +124,26 @@
 
     form {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      @include mobile{
+        gap: 10px;
+      }
 
       label {
         width: 100%;
         max-width: 200px;
+        @include mobile{
+          max-width: none;
+        }
       }
 
       input {
         width: 100%;
-        height: 34px;
+        height: 40px;
+        box-sizing: border-box;
         padding-left: 20px;
         background: #FFFFFF;
         border: 2px solid transparent;
@@ -107,6 +153,11 @@
 
         &:focus {
           border: 2px solid #cecece;
+        }
+        &::placeholder{
+          @include mobile{
+            font-size: 14px;
+          }
         }
       }
     }

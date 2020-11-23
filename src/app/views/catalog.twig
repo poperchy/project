@@ -4,6 +4,9 @@
     {% include 'components/breadcrumbs.twig' %}
     <section class="catalog">
         <div class="container">
+            <div class="catalog__head-mobile">
+                <h3>Каталог товаров</h3>
+            </div>
             <div class="catalog__wrap">
                 <div class="catalog__filters-wrap">
                     <ul class="catalog__categories">
@@ -187,6 +190,38 @@
                 <div class="catalog__list">
                     <div class="catalog__head">
                         <h3>Каталог товаров</h3>
+                        <button class="btn--border-red btn--filter">Фильтр
+                            <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line y1="3" x2="28" y2="3" stroke="url(#paint0_linear)" stroke-width="2"/>
+                                <line y1="12" x2="28" y2="12" stroke="url(#paint1_linear)" stroke-width="2"/>
+                                <line y1="21" x2="28" y2="21" stroke="url(#paint2_linear)" stroke-width="2"/>
+                                <circle cx="6" cy="3" r="3" fill="url(#paint3_linear)"/>
+                                <circle cx="22" cy="12" r="3" fill="#BE0E0E"/>
+                                <circle cx="11" cy="21" r="3" fill="url(#paint4_linear)"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear" x1="3.63358" y1="3.19403" x2="4.16839" y2="7.12843" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.139582" stop-color="#EB1414"/>
+                                        <stop offset="1" stop-color="#940909"/>
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear" x1="3.63358" y1="12.194" x2="4.16839" y2="16.1284" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.139582" stop-color="#EB1414"/>
+                                        <stop offset="1" stop-color="#940909"/>
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear" x1="3.63358" y1="21.194" x2="4.16839" y2="25.1284" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.139582" stop-color="#EB1414"/>
+                                        <stop offset="1" stop-color="#940909"/>
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear" x1="3.77862" y1="-4.83582" x2="9.68767" y2="-3.28328" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.139582" stop-color="#EB1414"/>
+                                        <stop offset="1" stop-color="#940909"/>
+                                    </linearGradient>
+                                    <linearGradient id="paint4_linear" x1="8.77862" y1="13.1642" x2="14.6877" y2="14.7167" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.139582" stop-color="#EB1414"/>
+                                        <stop offset="1" stop-color="#940909"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </button>
                         <div class="catalog__filters-btn">
                             <span>Сортировать:</span>
                             <select id="mounth">
@@ -220,6 +255,90 @@
                             </button>
                         </div>
                     </div>
+                    <form class="catalog__filters catalog__filters--nodesk">
+                        <div class="close-filter">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="catalog__filters__wrap-slider">
+                            <div class="catalog__filters--wrap-content">
+                                <p class="slider__title">Цена</p>
+                                <div class="slider">
+                                    <div class="bar">
+                                        <div class="lp" data-pos="0.1"></div>
+                                        <div class="rp" data-pos="0.8"></div>
+                                    </div>
+                                </div>
+                                <div class="slider__input-wrap">
+                                    <label>От
+                                        <input type="number" value="10">
+                                    </label>
+                                    <label>
+                                        До
+                                        <input type="number" value="81">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="catalog__filters--wrap-content">
+                                <div class="catalog__filters-checkbox-wrap">
+                                    <div class="checkbox__volume">
+                                        <p>Объем</p>
+                                        <div class="catalog__wrap-label-nodesk">
+                                            <label>
+                                                <input type="checkbox">2 л.
+                                                <span></span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">3 л.
+                                                <span></span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">5 л.
+                                                <span></span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">8 л.
+                                                <span></span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">10 л.
+                                                <span></span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="checkbox__color">
+                                        <p>Цвет</p>
+                                        <div class="catalog__wrap-label-nodesk">
+                                            <label>
+                                                <input type="checkbox">Зеленый
+                                                <span></span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">Желтый
+                                                <span></span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">Зеленый
+                                                <span></span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">Синий
+                                                <span></span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox">Красный
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button type="button" class="btn btn--filter">Показать</button>
+                    </form>
+
                     <div class="catalog__items tile-row--active">
                         <form action="#" class="card-product">
                             <a href="#" class="popular-slider__img-wrap">
@@ -515,11 +634,11 @@
                             <ul class="pagination__list">
                                 <li class="pagination__item disabled"><a class="pagination__prev"></a></li>
                                 <li class="pagination__item"><a class="pagination__link pagination__link--active"
-                                                                href="otzyivyi.html?page=1">1</a></li>
+                                                                href="#">1</a></li>
                                 <li class="pagination__item"><a class="pagination__link"
-                                                                href="otzyivyi.html?page=2">2</a></li>
+                                                                href="#">2</a></li>
                                 <li class="pagination__item"><a class="pagination__next"
-                                                                href="otzyivyi.html?page=2"></a></li>
+                                                                href="#"></a></li>
                             </ul>
                         </div>
                     </div>

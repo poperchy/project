@@ -1,0 +1,113 @@
+{% extends 'layout/base.twig' %}
+{% block title %}Пасена{% endblock %}
+{% block body %}
+    {% include 'components/breadcrumbs.twig' %}
+    <section class="product-page">
+        <div class="container">
+            <div class="product-page__wrap">
+                <div class="product-page__slider">
+                    <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="images/product-page/1.jpg" data-fancybox="product-gallery">
+                                    <img src="images/product-page/1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/product-page/1.jpg" data-fancybox="product-gallery">
+                                    <img src="images/product-page/1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="images/product-page/1.jpg" data-fancybox="product-gallery">
+                                    <img src="images/product-page/1.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/product-page/1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="images/product-page/1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="images/product-page/1.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-page__content">
+                    <h1>Канистра пластиковая 5 л</h1>
+                    <hr>
+                    <div class="price-wrap">
+                        <div>
+                            <span class="old-price">100 руб/уп.</span>
+                            <span class="new-price">90 руб/уп.</span>
+                        </div>
+                        <span class="in-stock">В наличие</span>
+                        <span class="order">Под заказ</span>
+                    </div>
+                    <p>Групповая упаковка по 4 шт. или 8 шт. защищает канистры при транспортировке и складировании.</p>
+                    <div class="product-page__info">
+                        <div class="product-page__info-wrap">
+                            <div class="product-page__info-item">
+                                <p>Групповая упаковка по 4 шт</p>
+                                <span>высота X длина X ширина:</span>
+                                <p>370 мм X 480 мм X 580 мм</p>
+                            </div>
+                            <div class="product-page__info-item">
+                                <p>Групповая упаковка по 4 шт</p>
+                                <span>высота X длина X ширина:</span>
+                                <p>370 мм X 480 мм X 580 мм</p>
+                            </div>
+                        </div>
+                        <p>Палетирование</p>
+                        <div class="product-page__info-wrap">
+                            <div class="product-page__info-item">
+                                <p>Евро поддон 1200х800 мм, 92 шт.</p>
+                                <span>92 шт. - 23 групповые упаковки по 4 шт.</span>
+                            </div>
+                            <div class="product-page__info-item">
+                                <p>Cтандартный поддон 1200x1000мм, 96 шт.</p>
+                                <span>96 шт. - 12 групповых упаковок по 8 шт.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-page__calculator">
+                        <p>Расчет кубатуры</p>
+                        <div class="product-page__cubic-wrap">
+                            <div class="card-product__quantity-wrap">
+                                <span class="product-page__calculator-label">Количество</span>
+                                <div class="card-product__input-wrap">
+                                    <input type="text" class="number" value="1">
+                                    <span class="input-btn minus"></span>
+                                    <span class="input-btn plus"></span>
+                                </div>
+                            </div>
+                            <div class="product-page__calculator-cubic">
+                                <span class="product-page__calculator-label">Кубатура</span>
+                                <span><span>0.0267</span> м3</span>
+                            </div>
+                            <div class="product-page__calculator-count">
+                                <span class="product-page__calculator-label">Стоимость</span>
+                                <span><span>500</span> руб.</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <form action="#">
+                            <select id="color">
+                                <option value="hide">Цвет</option>
+                                <option value="january">Красный</option>
+                                <option value="february">Синий</option>
+                            </select>
+                            <select id="volume">
+                                <option value="hide">Объём</option>
+                                <option value="january">2</option>
+                                <option value="february">2</option>
+                            </select>
+                            <button class="btn">В корзину</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'layout/footer.twig' %}
+{% endblock %}

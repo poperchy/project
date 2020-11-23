@@ -18,6 +18,15 @@ window.onload = function () {
             'close',
         ],
     });
+    $('[data-fancybox="product-gallery"]').fancybox({
+        buttons: [
+            'slideShow',
+            'share',
+            'zoom',
+            'fullScreen',
+            'close',
+        ],
+    });
 
     const navMenu = document.querySelector('.nav__menu');
     const burgerBtn = document.querySelector('.burger__btn');
@@ -101,34 +110,34 @@ window.onload = function () {
     let inStockA = document.querySelector('.in-stock--action');
     let inStock = document.querySelector('.in-stock');
     let cartProduct = document.querySelectorAll('.catalog__items .card-product');
+    if (btnTileRow) {
+        btnTileRow.addEventListener('click', function () {
+            if (catalogList.classList.contains('tile-row--active')) {
+                catalogList.classList.remove('tile-row--active');
+                cartProduct.forEach(function item(e, i) {
+                    cartProduct[i].classList.add('card-product--active');
+                })
+                btnTileRow.classList.add('tile--active');
+                btnTileTile.classList.remove('tile--active');
 
-    btnTileRow.addEventListener('click', function () {
-        if (catalogList.classList.contains('tile-row--active')) {
-            catalogList.classList.remove('tile-row--active');
-            cartProduct.forEach(function item(e, i) {
-                cartProduct[i].classList.add('card-product--active');
-            })
-            btnTileRow.classList.add('tile--active');
-            btnTileTile.classList.remove('tile--active');
+                inStockA.style.display = "block";
 
-            inStockA.style.display="block";
+            }
+        });
 
-        }
-    });
+        btnTileTile.addEventListener('click', function () {
 
-    btnTileTile.addEventListener('click', function () {
-
-        if (!catalogList.classList.contains('tile-row--active')) {
-            catalogList.classList.add('tile-row--active');
-            cartProduct.forEach(function item(e, i) {
-                cartProduct[i].classList.remove('card-product--active');
-            })
-            btnTileRow.classList.remove('tile--active');
-            btnTileTile.classList.add('tile--active');
-            inStockA.style.display="none";
-        }
-    });
-
+            if (!catalogList.classList.contains('tile-row--active')) {
+                catalogList.classList.add('tile-row--active');
+                cartProduct.forEach(function item(e, i) {
+                    cartProduct[i].classList.remove('card-product--active');
+                })
+                btnTileRow.classList.remove('tile--active');
+                btnTileTile.classList.add('tile--active');
+                inStockA.style.display = "none";
+            }
+        });
+    }
 }
 
 var acc = document.getElementsByClassName("accordion");
@@ -145,6 +154,9 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+$('.number').val($('.number').val() + ' шт.');
+
 
 
 function openCity(evt, cityName) {
@@ -222,60 +234,60 @@ $('select').each(function () {
 });
 
 
-
-var twobombSlider  = (function(){
+var twobombSlider = (function () {
     var drag = false;
     var values = [];
-var currency = 'руб.';
+    var currency = 'руб.';
 
-    $(".slider").each(function(i,e){
+    $(".slider").each(function (i, e) {
         updateView(e);
     });
-    $(".slider>.bar>.lp,.slider>.bar>.rp").bind("mousedown",function(){
+    $(".slider>.bar>.lp,.slider>.bar>.rp").bind("mousedown", function () {
         drag = $(this);
     })
-    $(document).bind("mousemove",function(e){
-        if(!drag)
+    $(document).bind("mousemove", function (e) {
+        if (!drag)
             return;
-        var x = (e.pageX - $(drag).outerWidth()/2 - $(drag).parent().parent().offset().left)/$(drag).parent().parent().outerWidth();
-        if(x < 0 ) x = 0;
-        if(x > 1) x = 1;
+        var x = (e.pageX - $(drag).outerWidth() / 2 - $(drag).parent().parent().offset().left) / $(drag).parent().parent().outerWidth();
+        if (x < 0) x = 0;
+        if (x > 1) x = 1;
         var rp = $(drag).parent().find(".rp");
         var lp = $(drag).parent().find(".lp");
-        if($(drag).hasClass("lp") && x > $(rp).attr("data-pos") ){
-            $(rp).attr("data-pos",x);
+        if ($(drag).hasClass("lp") && x > $(rp).attr("data-pos")) {
+            $(rp).attr("data-pos", x);
         }
-        if($(drag).hasClass("rp") && x < $(lp).attr("data-pos") ){
-            $(lp).attr("data-pos",x);
+        if ($(drag).hasClass("rp") && x < $(lp).attr("data-pos")) {
+            $(lp).attr("data-pos", x);
         }
-        $(drag).attr("data-pos",x);
+        $(drag).attr("data-pos", x);
         updateView($(drag).parent().parent());
     });
-    $(document).bind("mouseup",function(){
+    $(document).bind("mouseup", function () {
         drag = false;
     });
-    function updateView(slider){
+
+    function updateView(slider) {
         var startVal = parseInt($(slider).find(".bar").data("start"));
         var endVal = parseInt($(slider).find(".bar").data("end"));
-        if(startVal > endVal)
+        if (startVal > endVal)
             endVal = startVal;
         startVal = startVal || 0;
         endVal = endVal || 100;
         var values = [];
-        for(var i = startVal; i <= endVal;i++)
+        for (var i = startVal; i <= endVal; i++)
             values.push(i);
-        var l  =$(slider).find(".lp").attr("data-pos");
-        var r  =$(slider).find(".rp").attr("data-pos");
+        var l = $(slider).find(".lp").attr("data-pos");
+        var r = $(slider).find(".rp").attr("data-pos");
         var x = $(slider).outerWidth() * l;
-        var w = (r - l)*$(slider).outerWidth();
-        $(slider).find(".bar").css({left:x+"px",width:w+"px"});
-        var index = Math.round(values.length*l);
-        if(index >= values.length)
-            index = values.length-1;
-        $(slider).find(".lp").html("<span>"+values[index]+' '+currency+"</span>");
-        index = Math.round(values.length*r);
-        if(index >= values.length)
-            index = values.length-1;
-        $(slider).find(".rp").html("<span>"+values[index]+' '+currency+"</span>");
+        var w = (r - l) * $(slider).outerWidth();
+        $(slider).find(".bar").css({left: x + "px", width: w + "px"});
+        var index = Math.round(values.length * l);
+        if (index >= values.length)
+            index = values.length - 1;
+        $(slider).find(".lp").html("<span>" + values[index] + ' ' + currency + "</span>");
+        index = Math.round(values.length * r);
+        if (index >= values.length)
+            index = values.length - 1;
+        $(slider).find(".rp").html("<span>" + values[index] + ' ' + currency + "</span>");
     }
 })();

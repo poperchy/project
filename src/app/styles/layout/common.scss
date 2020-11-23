@@ -55,7 +55,6 @@ button {
   transition: 0.25s;
 
 
-
   &--border-red {
     background: #FFFFFF;
     font-style: normal;
@@ -69,6 +68,17 @@ button {
     padding: 10px 18px;
     margin: 20px auto;
     transition: 0.2s;
+
+    @include mobile {
+      font-size: 14px;
+      padding: 7px 18px;
+    }
+
+    svg {
+      @include mobile {
+        width: 18px;
+      }
+    }
 
     &:hover {
       background: #F3F4F6;
@@ -347,6 +357,13 @@ button {
 .footer--no-border {
   border-top: transparent;
 }
-.in-stock--action{
+
+.in-stock--action {
   display: none;
+}
+
+.btn--tile {
+  @include mobile {
+    display: none;
+  }
 }
