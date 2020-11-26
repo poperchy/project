@@ -1,0 +1,161 @@
+{% extends 'layout/base.twig' %}
+{% block title %}Пасена{% endblock %}
+{% block body %}
+    {% include 'components/section-title.twig' with
+        {
+            title: 'Корзина товаров',
+        } %}
+<div class="container">
+    <div class="basket__wrap">
+        <div class="basket__head">
+            <div class="basket__c-1"></div>
+            <div class="basket__wrap-c">
+                <div class="basket__c-2">
+                    <p>Товар</p>
+                </div>
+                <div class="basket__c-3">
+                    <p>Количество</p>
+                </div>
+                <div class="basket__c-4">
+                    <p>Стоимость</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="basket__item">
+            <div class="basket__c-1">
+                <img src="images/basket/1.jpg" alt="">
+            </div>
+            <div class="basket__wrap-c">
+                <div class="basket__c-2">
+                    <h3>Канистра пластиковая 10л.</h3>
+                    <p>Прочная, компактная и универсальная канистра для хранения химических и пищеыых жидкостей</p>
+                    <p><span>Цвет:</span>Белый</p>
+                </div>
+                <div class="basket__c-3 show-d">
+                    <div class="card-product__quantity-wrap">
+                        <div class="card-product__input-wrap">
+                            <input type="text" class="number" value="1">
+                            <span class="input-btn minus"></span>
+                            <span class="input-btn plus"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__c-4 show-d">
+                    <p>190 б.р.</p>
+                </div>
+                <div class="basket__wrap-c-mobile">
+                    <div class="basket__c-3 hide-desktop">
+                        <div class="card-product__quantity-wrap">
+                            <div class="card-product__input-wrap">
+                                <input type="text" class="number" value="1">
+                                <span class="input-btn minus"></span>
+                                <span class="input-btn plus"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket__c-4 hide-desktop">
+                        <p>190 б.р.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="delete">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="basket__item">
+            <div class="basket__c-1">
+                <img src="images/basket/1.jpg" alt="">
+            </div>
+            <div class="basket__wrap-c">
+                <div class="basket__c-2">
+                    <h3>Канистра пластиковая 10л.</h3>
+                    <p>Прочная, компактная и универсальная канистра для хранения химических и пищеыых жидкостей</p>
+                    <p><span>Цвет:</span>Белый</p>
+                </div>
+                <div class="basket__c-3 show-d">
+                    <div class="card-product__quantity-wrap">
+                        <div class="card-product__input-wrap">
+                            <input type="text" class="number" value="1">
+                            <span class="input-btn minus"></span>
+                            <span class="input-btn plus"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__c-4 show-d">
+                    <p>190 б.р.</p>
+                </div>
+                <div class="basket__wrap-c-mobile">
+                    <div class="basket__c-3 hide-desktop">
+                        <div class="card-product__quantity-wrap">
+                            <div class="card-product__input-wrap">
+                                <input type="text" class="number" value="1">
+                                <span class="input-btn minus"></span>
+                                <span class="input-btn plus"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket__c-4 hide-desktop">
+                        <p>190 б.р.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="delete">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    <div class="basket__price-wrap">
+        <p><span>Итого:</span> сумма Вашего заказа <span>380</span> <span>б.р.</span></p>
+        <a href="#" class="btn--border">Оформить заказ</a>
+    </div>
+</div>
+{% include 'components/section-title.twig' with
+    {
+        title: 'Оформление заказа',
+    } %}
+
+<div class="ordering">
+    <div class="container">
+        <div class="ordering__wrap">
+            <div class="ordering__basket">
+                <div class="ordering__price-wrap basket__price-wrap">
+                    <p><span>Итого:</span> сумма Вашего заказа <span>380</span> <span>б.р.</span></p>
+                    <hr>
+                    <div class="ordering__list">
+                        <div class="ordering__item">
+                            <div class="ordering__img">
+                                <img src="images/basket/1.jpg" alt="">
+                            </div>
+                            <div class="ordering__wrap-desc">
+                                <h3>Канистра пластиковая 10л.</h3>
+                                <p><span>190</span> б.р.</p>
+                                <p><span>Цвет:</span>Белый</p>
+                                <p>Кол-во:<span> 2 уп.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ordering__form">
+                    <form action="#">
+                        <div class="ordering__form-head">
+                            <div class="ordering__form-head--active"><p>Доставка</p></div>
+                            <div class="ordering__form-head-line"></div>
+                            <div><p>Личные данные</p></div>
+                            <div class="ordering__form-head-line"></div>
+                            <div><p>Оплата</p></div>
+                        </div>
+                        <p class="ordering__form-title">Выберите способ получения заказа:</p>
+                        <div class="ordering__form-input-wrap"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'layout/footer.twig' %}
+    {% endblock %}

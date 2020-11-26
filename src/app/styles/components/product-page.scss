@@ -1,19 +1,71 @@
 .product-page {
   margin-top: 60px;
 
+  .palletizing {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__wrap-info {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  .new-price {
+    @include tablet {
+      font-size: 24px;
+      line-height: 40px;
+    }
+  }
+
+  .in-stock__wrap {
+    display: flex;
+    @include tablet {
+      flex-direction: column;
+    }
+    @include mobile{
+      flex-direction: column;
+    }
+
+
+  }
+
   h1 {
     font-weight: bold;
     font-size: 34px;
     line-height: 40px;
     margin-bottom: 10px;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 40px;
+    }
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   .price-wrap {
     margin: 20px 0;
     justify-content: normal;
 
+
     .in-stock, .order {
       margin-left: 50px;
+      @include tablet {
+        margin-left: 30px;
+      }
+      @include mobile{
+        margin-left: 30px;
+      }
     }
 
     div {
@@ -29,17 +81,31 @@
 
   &__slider, &__content {
     width: 50%;
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__wrap {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+    @include mobile {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   &__slider {
     display: flex;
     flex-direction: row-reverse;
+    @media(max-width: 1170px) and(min-width: 1024px) {
+      max-height: 550px;
+    }
   }
 
   &__content {
@@ -48,6 +114,10 @@
       line-height: 20px;
       letter-spacing: 0.02em;
       margin-bottom: 10px;
+      @include mobile {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 
@@ -57,6 +127,10 @@
       display: flex;
       gap: 15px;
       justify-content: space-between;
+      @include mobile{
+        flex-direction: column;
+        gap: 5px;
+      }
     }
 
     &-item {
@@ -66,6 +140,10 @@
       padding: 13px;
       width: 50%;
       margin-bottom: 20px;
+      @include mobile{
+        width: auto;
+        margin-bottom: 0;
+      }
 
       p {
         font-weight: bold;
@@ -74,6 +152,13 @@
         letter-spacing: 0.02em;
         margin-bottom: 10px;
         margin-top: 5px;
+
+        @include mobile {
+          font-size: 12px;
+          line-height: 20px;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -90,6 +175,10 @@
         letter-spacing: 0.02em;
         color: #123D6F;
         opacity: 0.85;
+        @include mobile {
+          font-size: 12px;
+          line-height: 20px;
+        }
       }
     }
   }
@@ -98,9 +187,15 @@
     display: flex;
     gap: 38px;
     margin-bottom: 20px;
+    @include mobile{
+      gap: 15px;
+    }
   }
 
   &__calculator {
+    @include mobile{
+      margin-top: 20px;
+    }
     p {
       font-weight: bold;
       font-size: 16px;
@@ -113,6 +208,9 @@
         min-height: 50px;
         display: flex;
         align-items: center;
+        @include mobile{
+          margin-bottom: 10px;
+        }
       }
     }
 
@@ -131,10 +229,14 @@
       gap: 15px;
       margin-top: 20px;
 
+      @include mobile{
+        flex-direction: column;
+      }
+
       .select-styled {
         background: #FFFFFF;
         box-shadow: 0px 2px 6px rgba(64, 93, 114, 0.35);
-        border-radius: 2px;
+        border-radius: 5Fpx;
       }
 
       button {
@@ -185,6 +287,136 @@
         margin-top: 10px;
       }
     }
+  }
 
+  &__description-wrap {
+    display: flex;
+    gap: 33px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 30px;
+    }
+    @include mobile {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__description, &__characteristics {
+    width: 50%;
+
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    &-list {
+      padding-top: 10px;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 40px;
+      margin-bottom: 15px;
+      @include mobile{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      opacity: 0.85;
+      margin-bottom: 20px;
+
+      @include tablet {
+        margin-bottom: 10px;
+      }
+      @include mobile {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__characteristics {
+    h3 {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 40px;
+      margin-bottom: 15px;
+      @include mobile{
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &-list {
+      background: #F3F4F6;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px 27px 15px 27px;
+
+      @include mobile{
+        padding: 15px 10px 15px 10px;
+      }
+    }
+
+    p {
+      white-space: nowrap;
+      font-size: 16px;
+      line-height: 40px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      p{
+        @include mobile{
+          font-size: 14px;
+          line-height: 40px;
+        }
+      }
+
+    }
+
+    &-line {
+      width: 100%;
+      height: 1px;
+      margin: 0 10px;
+      background: #123D6F;
+      opacity: 0.5;
+    }
+  }
+}
+
+.select__wrap{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form-hr{
+  @include mobile{
+    display: none;
   }
 }

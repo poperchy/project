@@ -144,7 +144,6 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
 });
 var galleryTop = new Swiper('.gallery-top', {
     spaceBetween: 60,
-    loopedSlides: 3,
     thumbs: {
         swiper: galleryThumbs,
     },

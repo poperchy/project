@@ -1,0 +1,64 @@
+.ordering {
+  .basket__price-wrap {
+    margin: 0;
+  }
+
+  &__basket {
+    display: flex;
+  }
+
+  &__wrap {
+    border: 1px solid #C4C9CF;
+    border-radius: 5px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__form {
+    background: #F3F4F6;
+    width: 100%;
+  }
+
+  &__price-wrap {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  &__form-head {
+    p {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 26px;
+      color: #123D6F;
+      opacity: 0.7;
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+
+    &--active {
+      p {
+        color: #123D6F;
+        opacity: 1;
+      }
+    }
+
+    &-line {
+      max-width: 72px;
+      width: 100%;
+      height: 1px;
+      background: rgba(18, 61, 111, 0.65);
+    }
+  }
+
+  &__form-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    color: #123D6F;
+  }
+}

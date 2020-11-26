@@ -227,6 +227,25 @@ button {
   }
 }
 
+.show-t-m{
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    display: block;
+  }
+}
+
+.hide-mob{
+  @include tablet{
+    display: none;
+  }
+  @include mobile{
+    display: none;
+  }
+}
+
 .container {
   position: relative;
   max-width: $container;
@@ -246,10 +265,10 @@ button {
 .show-d {
   display: flex;
   @include tablet {
-    display: none;
+    display: none !important;
   }
   @include mobile {
-    display: none;
+    display: none !important;
   }
 }
 
