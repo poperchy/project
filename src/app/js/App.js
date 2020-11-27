@@ -291,3 +291,27 @@ var twobombSlider = (function () {
         $(slider).find(".rp").html("<span>" + values[index] + ' ' + currency + "</span>");
     }
 })();
+
+
+function transition(e) {
+    e.fadeOut("fast", function() {
+        e.attr("id") !== $(".question:last").attr("id") ? e.next(".question").fadeIn("fast") : alert("done!")
+    })
+}
+
+function transitionPrev(e) {
+    e.fadeOut("fast", function() {
+        e.attr("id") !== $(".question:last").attr("id") ? e.prev(".question").fadeIn("fast") : e.attr("id") == $(".question:last").attr("id") && e.prev(".question").fadeIn("fast")
+    })
+}
+
+
+$(function() {
+    $(".ordering__item .btn").on("click", function(e) {
+        e.preventDefault()
+    }), $(".question:first").show(), $(".next").click(function() {
+        return transition($(this).closest(".question")), !1
+    }), $(".prev").click(function() {
+        return transitionPrev($(this).closest(".question")), !1
+    })
+});

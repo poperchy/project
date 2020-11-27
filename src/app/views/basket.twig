@@ -124,38 +124,168 @@
         <div class="ordering__wrap">
             <div class="ordering__basket">
                 <div class="ordering__price-wrap basket__price-wrap">
-                    <p><span>Итого:</span> сумма Вашего заказа <span>380</span> <span>б.р.</span></p>
-                    <hr>
+                    <div class="ordering__header">
+                        <p><span>Итого:</span> сумма Вашего заказа <span>380</span> <span>б.р.</span></p>
+                    </div>
                     <div class="ordering__list">
-                        <div class="ordering__item">
+                        <div class="ordering__ls">
                             <div class="ordering__img">
                                 <img src="images/basket/1.jpg" alt="">
                             </div>
                             <div class="ordering__wrap-desc">
                                 <h3>Канистра пластиковая 10л.</h3>
-                                <p><span>190</span> б.р.</p>
-                                <p><span>Цвет:</span>Белый</p>
+                                <p>190 <span class="ordering__count">б.р.</span></p>
+                                <p>Цвет:<span> Белый</span></p>
+                                <p>Кол-во:<span> 2 уп.</span></p>
+                            </div>
+                        </div>
+                        <div class="ordering__ls">
+                            <div class="ordering__img">
+                                <img src="images/basket/1.jpg" alt="">
+                            </div>
+                            <div class="ordering__wrap-desc">
+                                <h3>Канистра пластиковая 10л.</h3>
+                                <p>190 <span class="ordering__count">б.р.</span></p>
+                                <p>Цвет:<span> Белый</span></p>
                                 <p>Кол-во:<span> 2 уп.</span></p>
                             </div>
                         </div>
                     </div>
+                    <div class="ordering__wrap-btn-link"><a href="#" class="btn--border-red">В каталог</a></div>
                 </div>
                 <div class="ordering__form">
                     <form action="#">
-                        <div class="ordering__form-head">
-                            <div class="ordering__form-head--active"><p>Доставка</p></div>
-                            <div class="ordering__form-head-line"></div>
-                            <div><p>Личные данные</p></div>
-                            <div class="ordering__form-head-line"></div>
-                            <div><p>Оплата</p></div>
+                        <div class="ordering__item question" id="question1">
+                            <div class="ordering__form-head">
+                                <div class="ordering__form-head--active"><p>Доставка</p></div>
+                                <div class="ordering__form-head-line"></div>
+                                <div><p>Личные данные</p></div>
+                                <div class="ordering__form-head-line"></div>
+                                <div><p>Оплата</p></div>
+                            </div>
+                            <p class="ordering__form-title">Выберите способ получения заказа:</p>
+                            <div class="ordering__form-input-wrap">
+                                <div class="catalog__filters-checkbox-wrap">
+                                    <div class="checkbox__volume">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="delivery">Доставка
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="ordering__input-wrap">
+                                        <div class="ordering__input">
+                                            <p class="ordering__desc-label">Если у Вас нет возможности самовывоза, мы готовы организовать доставку
+                                                через наших партнеров</p>
+                                            <div class="ordering__wrap-input">
+                                                <div class="form-map__wrap-input">
+                                                    <label><input type="text" placeholder="Город"></label>
+                                                    <label><input id="phone-mask" type="tel" placeholder="Адрес"></label>
+                                                </div>
+                                                <textarea name="" id="" cols="30" rows="10"
+                                                          placeholder="Коментарий"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ordering__text-wrap">
+                                    <div class="catalog__filters-checkbox-wrap">
+                                        <div class="checkbox__volume">
+                                            <label>
+                                                <input type="radio" name="delivery">Самовывоз
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="ordering__info">
+                                            <p class="ordering__desc-label ordering__desc-label--mod ">Бесплатно</p>
+                                            <p class="desc-map">Минск, пер. Козлова 24А</p>
+                                            <p class="desc-clock">Пн-пт: 9.00 - 17.00 <br>Сб, вс: выходной</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="ordering__text-wrap ordering__btns-wrap">
+                                <a href="#" class="btn next">Далее</a>
+                            </div>
                         </div>
-                        <p class="ordering__form-title">Выберите способ получения заказа:</p>
-                        <div class="ordering__form-input-wrap"></div>
+                        <div class="ordering__item question" id="question2">
+                            <div class="ordering__form-head">
+                                <div><p>Доставка</p></div>
+                                <div class="ordering__form-head-line"></div>
+                                <div class="ordering__form-head--active"><p>Личные данные</p></div>
+                                <div class="ordering__form-head-line"></div>
+                                <div><p>Оплата</p></div>
+                            </div>
+
+                            <div class="ordering__form-input-wrap second-ques">
+                                <div class="catalog__filters-checkbox-wrap wrap-inputs">
+                                    <div class="ordering__input-wrap second-ques-wrap">
+                                        <div class="ordering__input">
+                                            <div class="ordering__wrap-input">
+                                                <div class="form-map__wrap-input label-low">
+                                                    <label><input type="text" placeholder="Ваше имя"></label>
+                                                    <label><input id="phone-mask2" type="tel" placeholder="Номер телефона"></label>
+                                                    <label><input type="text" placeholder="E-mail"></label>
+                                                </div>
+                                                <textarea name="" id="" cols="30" rows="10"
+                                                          placeholder="Коментарий"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="ordering__text-wrap ordering__btns-wrap">
+                                <a href="#" class="btn prev">Назад</a>
+                                <a href="#" class="btn next">Далее</a>
+                            </div>
+                        </div>
+                        <div class="ordering__item question" id="question3">
+                            <div class="ordering__form-head">
+                                <div><p>Доставка</p></div>
+                                <div class="ordering__form-head-line"></div>
+                                <div><p>Личные данные</p></div>
+                                <div class="ordering__form-head-line"></div>
+                                <div class="ordering__form-head--active"><p>Оплата</p></div>
+                            </div>
+
+                            <div class="ordering__form-input-wrap second-ques">
+                                <div class="catalog__filters-checkbox-wrap wrap-inputs">
+                                    <div class="ordering__input-wrap second-ques-wrap">
+
+                                        <div class="ordering__input ordering__input--3">
+                                            <div class="ordering__wrap-input ordering__wrap-input--3">
+                                                <p>Безналичный расчет</p>
+                                                <div class="form-map__wrap-input">
+                                                    <label><input type="text" placeholder="Банк"></label>
+                                                    <select id="mounth">
+                                                        <option value="hide">Счет получателя платежа</option>
+                                                        <option value="january">January</option>
+                                                        <option value="february">February</option>
+                                                    </select>
+                                                    <label><input type="text" placeholder="БИК"></label>
+                                                    <label><input type="text" placeholder="УНП"></label>
+                                                    <label><input type="text" placeholder="ОКПО"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="ordering__text-wrap ordering__btns-wrap">
+                                <a href="#" class="btn prev prev3">Назад</a>
+                                <button  class="btn">Оформить</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
+        </div>
     </div>
-
     {% include 'layout/footer.twig' %}
     {% endblock %}
