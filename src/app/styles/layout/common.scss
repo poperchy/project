@@ -227,7 +227,7 @@ button {
   }
 }
 
-.show-t-m{
+.show-t-m {
   display: none;
   @include tablet {
     display: block;
@@ -237,11 +237,11 @@ button {
   }
 }
 
-.hide-mob{
-  @include tablet{
+.hide-mob {
+  @include tablet {
     display: none;
   }
-  @include mobile{
+  @include mobile {
     display: none;
   }
 }
@@ -386,3 +386,50 @@ button {
     display: none;
   }
 }
+
+
+.overlay__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(7, 7, 7, 0.5);
+  z-index: 1500;
+  display: flex;
+}
+
+.modal {
+
+}
+
+.modal--ordering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  max-width: 695px;
+  min-height: 574px;
+  background: #F3F4F6;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
