@@ -5,8 +5,36 @@
   justify-content: center;
   align-items: center;
 
+  @include tablet{
+    height: 660px;
+  }
+  @include mobile{
+    height: 434px;
+  }
+
   &__wrap {
     position: relative;
+  }
+
+  svg {
+    width: 630px;
+    @include tablet {
+      width: 430px;
+    }
+    @include mobile{
+      width: 250px;
+    }
+  }
+
+  .magnifier {
+    @include tablet {
+      width: 235px;
+      top: 8% !important;
+    }
+    @include mobile{
+      width: 150px;
+      top:18% !important;
+    }
   }
 
   &__link-wrap {
@@ -19,11 +47,25 @@
     z-index: 2;
     letter-spacing: 2px;
 
+    @include tablet{
+      margin-top: 78px;
+      margin-bottom: -109px;
+    }
+
     h1 {
       font-weight: bold;
       font-size: 48px;
       color: #FFFFFF;
       margin-bottom: 40px;
+      @include tablet {
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+      @include mobile {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 20px;
+      }
     }
 
     a {
@@ -140,29 +182,31 @@
   0% {
     transform: rotate(0deg) scale(1);
   }
-  50%{
+  50% {
     transform: rotate(180deg) scale(1.2);
-}
+  }
   100% {
     transform: rotate(360deg) scale(1);
   }
 }
-@keyframes magnifier   {
+
+@keyframes magnifier {
   0% {
     transform: rotate(0deg);
   }
-  50%{
+  50% {
     transform: rotate(3deg);
   }
   100% {
     transform: rotate(0deg);
   }
 }
-@keyframes upDown   {
+
+@keyframes upDown {
   0% {
     transform: translateY(0);
   }
-  50%{
+  50% {
     transform: translateY(15px);
   }
   100% {
