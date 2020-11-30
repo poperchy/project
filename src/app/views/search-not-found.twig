@@ -1,0 +1,215 @@
+{% extends 'layout/base.twig' %}
+{% block title %}Пасена{% endblock %}
+{% block body %}
+    <section class="result-search">
+        <div class="container">
+            <div class="result-search__wrap">
+                {% include 'components/section-title.twig' with
+                    {
+                        title: 'Результаты поиска',
+                    } %}
+                <p>К сожалению, по запросу <span>пропропп</span> ничего не найдено. Попробуйте использовать другие
+                    ключевые слова.</p>
+                <div class="search-not-found__img-wrap">
+                    <img src="images/sad.svg" alt="">
+                </div>
+                {% include 'components/section-title.twig' with
+                    {
+                        title: 'Популярные товары',
+                    } %}
+                <section class="popular-slider">
+                    <div class="container">
+                        <div class="swiper-container swiper-popular">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <form action="#" class="card-product">
+                                        <a href="#" class="popular-slider__img-wrap">
+                                            <img src="images/products/pr-min.png" alt="">
+                                            <h4>Канистра 3 литра</h4>
+                                        </a>
+                                        <div>
+                                            <div class="price-wrap">
+                                                <p>
+                                                    <span class="old-price">100 руб/уп.</span>
+                                                    <span class="new-price">90 руб/уп.</span>
+                                                </p>
+                                                <span class="in-stock">В наличие</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__btn-wrap">
+                                            <div class="card-product__quantity-wrap">
+                                                <div class="card-product__input-wrap">
+                                                    <input type="number" value="1">
+                                                    <span class="input-btn minus"></span>
+                                                    <span class="input-btn plus"></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__btn">
+                                                <button class="btn">В корзину</button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="card-product__hover"></a>
+                                    </form>
+                                </div>
+                                <div class="swiper-slide">
+                                    <form action="#" class="card-product">
+                                        <a class="popular-slider__img-wrap">
+                                            <img src="images/products/pr-min.jpg" alt="">
+                                            <h4>Канистра 3 литра</h4>
+                                        </a>
+                                        <div>
+                                            <div class="price-wrap price-wrap--normal">
+                                                <p>
+                                                    <span class="price">90 руб/уп.</span>
+                                                </p>
+                                                <span class="order">Под заказ</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__btn-wrap">
+                                            <div class="card-product__quantity-wrap">
+                                                <div class="card-product__input-wrap">
+                                                    <input type="number" value="1">
+                                                    <span class="input-btn minus"></span>
+                                                    <span class="input-btn plus"></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__btn">
+                                                <button class="btn">В корзину</button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="card-product__hover"></a>
+                                    </form>
+                                </div>
+                                <div class="swiper-slide">
+                                    <form action="#" class="card-product">
+                                        <a href="#" class="popular-slider__img-wrap">
+                                            <img src="images/products/pr-min.png" alt="">
+                                            <h4>Канистра 3 литра</h4>
+                                        </a>
+                                        <div>
+                                            <div class="price-wrap">
+                                                <p>
+                                                    <span class="old-price">100 руб/уп.</span>
+                                                    <span class="new-price">90 руб/уп.</span>
+                                                </p>
+                                                <span class="in-stock">В наличие</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__btn-wrap">
+                                            <div class="card-product__quantity-wrap">
+                                                <div class="card-product__input-wrap">
+                                                    <input type="number" value="1">
+                                                    <span class="input-btn minus"></span>
+                                                    <span class="input-btn plus"></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__btn">
+                                                <button class="btn">В корзину</button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="card-product__hover"></a>
+                                    </form>
+                                </div>
+                                <div class="swiper-slide">
+                                    <form action="#" class="card-product">
+                                        <a class="popular-slider__img-wrap">
+                                            <img src="images/products/pr-min.jpg" alt="">
+                                            <h4>Канистра 3 литра</h4>
+                                        </a>
+                                        <div>
+                                            <div class="price-wrap price-wrap--normal">
+                                                <p>
+                                                    <span class="price">90 руб/уп.</span>
+                                                </p>
+                                                <span class="order">Под заказ</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__btn-wrap">
+                                            <div class="card-product__quantity-wrap">
+                                                <div class="card-product__input-wrap">
+                                                    <input type="number" value="1">
+                                                    <span class="input-btn minus"></span>
+                                                    <span class="input-btn plus"></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__btn">
+                                                <button class="btn">В корзину</button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="card-product__hover"></a>
+                                    </form>
+                                </div>
+                                <div class="swiper-slide">
+                                    <form action="#" class="card-product">
+                                        <a href="#" class="popular-slider__img-wrap">
+                                            <img src="images/products/pr-min.png" alt="">
+                                            <h4>Канистра 3 литра</h4>
+                                        </a>
+                                        <div>
+                                            <div class="price-wrap">
+                                                <p>
+                                                    <span class="old-price">100 руб/уп.</span>
+                                                    <span class="new-price">90 руб/уп.</span>
+                                                </p>
+                                                <span class="in-stock">В наличие</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__btn-wrap">
+                                            <div class="card-product__quantity-wrap">
+                                                <div class="card-product__input-wrap">
+                                                    <input type="number" value="1">
+                                                    <span class="input-btn minus"></span>
+                                                    <span class="input-btn plus"></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__btn">
+                                                <button class="btn">В корзину</button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="card-product__hover"></a>
+                                    </form>
+                                </div>
+                                <div class="swiper-slide">
+                                    <form action="#" class="card-product">
+                                        <a class="popular-slider__img-wrap">
+                                            <img src="images/products/pr-min.jpg" alt="">
+                                            <h4>Канистра 3 литра</h4>
+                                        </a>
+                                        <div>
+                                            <div class="price-wrap price-wrap--normal">
+                                                <p>
+                                                    <span class="price">90 руб/уп.</span>
+                                                </p>
+                                                <span class="order">Под заказ</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__btn-wrap">
+                                            <div class="card-product__quantity-wrap">
+                                                <div class="card-product__input-wrap">
+                                                    <input type="number" value="1">
+                                                    <span class="input-btn minus"></span>
+                                                    <span class="input-btn plus"></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__btn">
+                                                <button class="btn">В корзину</button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="card-product__hover"></a>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="#" class="btn--border">Каталог товаров</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </section>
+    {% include 'layout/footer.twig' %}
+{% endblock %}

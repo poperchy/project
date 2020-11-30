@@ -1,0 +1,10 @@
+.search-not-found {
+  &__img-wrap {
+    display: flex;
+    justify-content: center;
+
+    img{
+      margin-top: 10px;
+    }
+  }
+}
