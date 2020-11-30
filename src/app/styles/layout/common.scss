@@ -396,7 +396,7 @@ button {
   left: 0;
   background: rgba(7, 7, 7, 0.5);
   z-index: 1500;
-  display: flex;
+  display: none;
 }
 .modal__container{
   padding: 0 43px 0 43px;
@@ -408,7 +408,12 @@ button {
 .modal {
 
 }
-
+.overlay__modal--ordering{
+  display: none;
+}
+.overlay__modal--index{
+  display: none;
+}
 .modal--ordering {
   position: absolute;
   top: 50%;
@@ -419,7 +424,6 @@ button {
   min-height: 574px;
   background: #F3F4F6;
   border-radius: 5px;
-  display: none;
 }
 
 .modal--index {
